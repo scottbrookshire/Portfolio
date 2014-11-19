@@ -1,0 +1,257 @@
+/* Home
+------------------------------------------------------------ */
+.borderFlare{
+	content: "";
+	display:block;
+	border-bottom: 4px solid $primColor;
+	width:3em;
+	padding:.25em 0 0 0;
+
+}
+.backgroundImage{
+	@include prefixer(background-size, cover, webkit moz o spec);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-position:50% 50%9 !important;
+}
+
+.hero{
+	
+	@include background-image(linear-gradient(to top, rgba(0,0,0,.2), rgba(0,0,0,.2)), url("../img/hero.jpg"));
+	@extend .backgroundImage;
+	.tag{
+		position:absolute;
+		bottom:20%;
+
+	}
+	a .arrow{
+		max-width: 8.5em;
+		width:100%;
+		position:absolute;
+		right:10%;
+		bottom:1%;
+		fill:$primColor;
+		opacity:.8;
+		// @extend .slideDown;
+		@extend .transition;
+		&:hover{
+			opacity:1;
+			fill:$primHover;
+			@extend .transitionHover;
+		}
+	}
+	h1{
+		color:$primColor;
+		
+		&::after{
+			@extend .borderFlare;
+		}
+		span{
+			font-weight: 100;
+			
+		}
+		@extend .slideRight;
+	}
+	h3{
+		color:$primColor;
+		@extend .slideRight;
+	}
+}
+
+.topProject{
+	width:100%;
+	height:35em;
+	background-color: black;
+	@include background-image(linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.6)));
+	@extend .backgroundImage;
+	&:nth-child(1){
+		background-image: url("../img/project2.jpg");
+		 
+		
+	}
+	&:nth-child(2){
+		// @include background-image(linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.6)), url("../img/project1.jpg"));
+		background-image: url("../img/project2.jpg");
+		text-align: right;
+
+	}
+	&:nth-child(3){
+		background-image: url("../img/project2.jpg");
+	}
+	
+	.wrapper{
+		padding-top: 15%;
+		&:nth-child(2){
+			text-align: right;
+		}
+	}
+	h2{
+		color:$primColor;
+		&::after{
+			@extend .borderFlare;
+		}
+	}
+	h3{
+		color:$primColor;
+		margin-bottom: 3.8em;
+	}
+	a{
+		text-transform: uppercase;
+		color: $primColor;
+		padding:1.3em 2.2em;
+		letter-spacing: .3em;
+		font-size: .9em;
+		box-shadow: 0px 0px 0px 2px $primColor;
+		@extend .transition;
+
+		&:hover{
+			background-color: $primColor;
+			color:$secColor;
+			font-weight: 400;
+			@extend .transitionHover;
+		}
+		
+	}
+	@include media($small){
+		height:25em;
+	}
+
+}
+
+.projectGrid{
+	clear: both;
+    margin: 0 auto;
+	.gridItem{
+		background-color: #000;
+		float: left;
+    	margin: 0 0 0 0;
+    	list-style: none;
+    	
+    	height:18.5em;
+		width: 33.333333333333333%;
+		@extend .backgroundImage;
+		@include media ($medium) { 
+			width: 50%;
+			background-color: red;
+		}
+		@include media ($small) { 
+			width: 100%;
+		}
+		&:nth-child(1){
+			background-image: url("../img/grid1.gif");
+		}
+		&:nth-child(2){
+			background-image: url("../img/grid2.jpg");
+		}
+		&:nth-child(3){
+			background-image: url("../img/project.jpg");
+		}
+		&:nth-child(4){
+			background-image: url("../img/project1.jpg");
+		}
+		&:nth-child(5){
+			background-image: url("../img/project2.jpg");
+		}
+		&:nth-child(6){
+			background-image: url("../img/grid2.jpg");
+		}
+	}
+	.gridTitle{
+		padding:20% 0 0 10%;
+		h2{
+			// font-size: 1.2em;
+			color:$primColor;
+			&::after{
+				@extend .borderFlare;
+			}
+		}
+		h3{
+			color:$primColor;
+			font-size: .9em;
+			letter-spacing: .2em
+		}
+		@include media ($small){
+			padding:20% 0 0 4%;
+		}
+	}
+	// a{
+	// 	text-transform: uppercase;
+	// 	color: $primColor;
+	// 	@extend .transition;
+
+	// 	&:hover{
+	// 		background-color: $primColor;
+	// 		color:$secColor;
+	// 		font-weight: 400;
+	// 		@extend .transitionHover;
+	// 	}
+		
+	// }
+}
+
+.colorOverlay{
+	background-color: rgba(0,0,0,.4);
+	width:100%;
+	height:100%;
+	position:relative;
+	@extend .imgTransition;
+}
+.projectHover{
+	background-color: rgba(0,0,0,.2);
+	@extend .imgTransitionHover;
+}
+
+// .row {
+//     clear: both;
+//     max-width: 1040px;
+//     margin: 0 auto;
+// }
+
+// [class^="col-"] {
+//     float: left;
+//     margin: 0 3.84615384615% 0 0;
+//     list-style: none;
+//     position: relative;
+// }
+
+// [class^="col-"]:last-child {
+//     margin: 0;
+// }
+
+// .col-1 { width: 4.8076923077% }
+// .col-2 { width: 13.4615384615% }
+// .col-3 { width: 22.1153846154% }
+// .col-4 { width: 30.7692307692% }
+// .col-5 { width: 39.4230769231% }
+// .col-6 { width: 48.0769230769% }
+// .col-7 { width: 56.7307692308% }
+// .col-8 { width: 65.3846153846% }
+// .col-9 { width: 74.0384615385% }
+// .col-10 { width: 82.6923076923% }
+// .col-11 { width: 91.3461538462% }
+// .col-12 { width: 100%; margin: 0 }
+.homeAbout{
+	clear: both;
+	@include background-image(linear-gradient(to right, #D6D3D2, #BFBCBB));
+	padding:12% 0 10% 0;
+	h3{
+		
+		font-weight: bold;
+		line-height: 1.4em;
+		// border-top: 2px solid $primColor;
+		padding-top: 4%;
+		color: $primColor;
+		&::after{
+			padding-top: 4%;
+			@extend .borderFlare;
+		}
+	}
+	p{
+		font-size: 1.2em;
+		letter-spacing: .1em;
+		color: $primColor;
+	}
+
+}
+
+

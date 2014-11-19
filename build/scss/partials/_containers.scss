@@ -1,0 +1,17 @@
+/* Containers
+------------------------------------------------------------ */
+
+body{
+	background-color: $bodyColor;
+	font-size: 1em;
+    line-height: 1.4;
+}
+
+.wrapper{
+	@include outer-container;
+	padding:0 4%;
+}
+
+.hero{
+	
+}

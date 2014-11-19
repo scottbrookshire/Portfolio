@@ -1,0 +1,57 @@
+/* Typography
+------------------------------------------------------------ */
+
+// Modular Scale
+$bodyFontSize	           		: 18px;
+$bodyLineHeight		            : 1.5;
+$scaleFactor		            : 1.7; // http://modularscale.com/
+
+body { @include rhythm(0); }
+
+h1,.alpha   { @include rhythm(2, 0, 1); }
+h2,.beta    { @include rhythm(1, 0, 1); }
+h3,.gamma   { @include rhythm(0, 0, 1); }
+h4,.delta   { @include rhythm(0, 0, 0); }
+h5,.epsilon { @include rhythm(0, 0, 0); }
+h6,.zeta    { @include rhythm(-1, 0, 0); }
+p, ul, ol   { @include rhythm(0, 0, 1); }
+
+
+// 
+$headlineFont				:  "ff-din-web", 'Helvetica', sans-serif;
+$bodyFont					:  "ff-din-web", 'Helvetica', sans-serif;
+h1, h2{
+	font-family: $headlineFont;
+	text-transform: uppercase;
+	font-weight: bold;
+	
+}
+h1{
+	letter-spacing: .15em;
+	line-height: 1.45em;
+	@include media ($small) { 
+		font-size: 2em;
+		line-height: 1.3em;
+		letter-spacing: .1em;
+	}
+}
+h2, .beta{
+	letter-spacing: .2em;
+	@include media ($small) { 
+		font-size: 1.5em;
+		letter-spacing: .1em;
+	}
+}
+
+h3, h4, h5, h6{
+	font-family: $headlineFont;
+	text-transform: uppercase;
+	font-weight: regular;	
+	letter-spacing: .22em;
+	@include media ($small) { 
+		letter-spacing: .1em;
+	}
+}
+p, a{
+	font-family: $bodyFont;
+}

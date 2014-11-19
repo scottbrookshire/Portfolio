@@ -1,0 +1,38 @@
+/* Colors
+------------------------------------------------------------ */
+
+$primColor				: #F2F0F0; // #F2F0F0
+$primHover				: #fff; //#E03243 Red
+
+$secColor				: #333;
+$secHover				: #000; //#E03243 Red
+
+$terColor				: #999;
+
+$headlineColor			: #F1F1F1;
+$bodyColor          	: #F1F1F1;
+
+$linkColor				: red;
+$linkHover				: white;
+
+a{
+	text-decoration: none;
+	&:link, &:visited, &:active{
+		color:$linkColor;
+		@extend .transition; 
+	}	
+	&:hover{
+		color:$linkHover;
+		@extend .transitionHover;
+	}
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
