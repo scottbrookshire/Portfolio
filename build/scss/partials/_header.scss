@@ -40,8 +40,10 @@ header{
 }
 
 .xIcon{	
-	width:4em;
+	width:6em;
 	float:right;
+    margin-top: -3em;
+    margin-right:  -5em;
 	z-index: 9999;
 	cursor:pointer;
 	@extend .transition;
@@ -76,14 +78,14 @@ html, body{
 
 .pushy{
     position: fixed;
-    max-width: 1800px;
+    max-width: 800px;
     width:85%;
     height: 100%;
     top: 0;
     right:0;
     z-index: 9999;
-    background: rgba(34,34,34,.95);
-    padding:3em 6em 3em 6em;
+    background: rgba(34,34,34,1);
+    padding:3em 5% 3em 5%;
     
     overflow: auto;
     -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
@@ -168,7 +170,7 @@ html, body{
     bottom: 0;
     left: 0;
     z-index: 9998;
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0,0,0,0.4);
     -webkit-animation: fade 500ms; 
     -moz-animation: fade 500ms; 
     -o-animation: fade 500ms;

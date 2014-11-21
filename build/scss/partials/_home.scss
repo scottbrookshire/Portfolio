@@ -6,7 +6,14 @@
 	border-bottom: 4px solid $primColor;
 	width:3em;
 	padding:.25em 0 0 0;
-
+}
+.borderFlareRight{
+	content: "";
+	float:right;
+	display:block;
+	border-bottom: 4px solid $primColor;
+	width:3em;
+	padding:.25em 0 0 0;
 }
 .backgroundImage{
 	@include prefixer(background-size, cover, webkit moz o spec);
@@ -73,6 +80,9 @@
 		// @include background-image(linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.6)), url("../img/project1.jpg"));
 		background-image: url("../img/project2.jpg");
 		text-align: right;
+		h2::after{
+			@extend .borderFlareRight;
+		}
 
 	}
 	&:nth-child(3){
