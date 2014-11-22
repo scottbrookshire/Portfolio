@@ -9,32 +9,58 @@ img {
 header{
 	position:fixed;
 	width:100%;
-	padding:1em;
+	padding:.8em;
 	z-index: 9990;
-
+        @include media($medium){
+            padding:0em;
+        }
+        @include media($small){
+            
+        }
 	a .logo{
 		max-width:7em;
 		width:100%;
-		fill:$primColor;
-		padding-top: .5em;
+		padding-top: 0em;
 		@extend .transition;
-		&:hover{
-			fill:$primHover;
-			@extend .transitionHover;
-		}
+        path, rect, circle{
+            fill:$primColor;
+            opacity: 1;
+            @extend .transition;
+            }
+        &:hover path, &:hover circle, &:hover rect{
+            fill:black;
+            @extend .transitionHover;
+        }
+        @include media($medium){
+            max-width:6em; 
+        }
+        @include media($small){
+            max-width:4.8em; 
+        }
 	}
 
 	.menu-btn{
 		float:right;
 		max-width:6em;
 		width:100%;
-		fill: $primColor;
 		cursor:pointer;
 		@extend .transition;
-		&:hover{
-			fill:$primHover;
-			@extend .transitionHover;
-		}
+        path, rect, circle{
+            fill:$primColor;
+            opacity: 1;
+            @extend .transition;
+            }
+        &:hover path, &:hover circle, &:hover rect{
+            fill:black;
+            @extend .transitionHover;
+        }
+        @include media($medium){
+            max-width:5em; 
+        }
+        @include media($small){
+            max-width:4.3em; 
+        }
+        
 	}
 	@extend .slideUp;
 }
@@ -78,57 +104,88 @@ html, body{
 
 .pushy{
     position: fixed;
-    max-width: 800px;
-    width:85%;
+    max-width: 420px;
+    width:80%;
     height: 100%;
     top: 0;
     right:0;
     z-index: 9999;
-    background: rgba(34,34,34,1);
-    padding:3em 5% 3em 5%;
-    
+    background: rgba(15, 15, 15,1);
+    padding:1.5em 4% 0 4%;
     overflow: auto;
     -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
+      @include media($small){
+            padding-left: 6%;
+        }
+    h3{
+        color:$primColor;
+        font-size: 1.2em;
+        letter-spacing: .5em;
+        font-weight: 600;
+        padding-top: 10%;
+        line-height: 1.6em;
+        @include media($medium){
+            padding-top: 3%;
+        }
+    }
+    p{
+        color: #b3b3b1;
+        font-size: .9em;
+        letter-spacing: .05em;
+        @include media($medium){
+            margin-bottom:0;
+        }
+    }
+    a{
+        font-size: 1.2em;
+        font-weight: regular;
+        letter-spacing: .4em;
+        font-family: $headlineFont;
+        text-transform: uppercase;
+        display: block;
+        color: #b3b3b1;
+        padding: 2em 0 .5em 0;
+        text-decoration: none;
+        @extend .transition;
+        @include media($medium){
+            padding:1.5em 0 0 0;
+            color: darken($primColor, 10%);
+        }
+        @include media($small){
+            font-size: 1em;
+        }
+        &::after{
+            content: "";
+            display:block;
+            width:10%;
+            padding-bottom: .5em;
+            border-bottom: 4px solid rgba(255,255,255, .4);
+            @extend .transition;
+        }
+        &:hover{
+            // color:$primHover;
+            // box-shadow: 0 2px 0 0 rgba(255,255,255,1);
+           color:#fff;
+            &::after{
+               width:30%;
+                border-bottom: 4px solid rgba(255,255,255, .8);
+                @extend .transitionHover;
+                // -webkit-transition: all 400ms ease;
+            }
+        }
+    }
 }
 
-.pushy a{
-	font-size: 1.2em;
-	font-weight: light;
-	letter-spacing: .4em;
-	font-family: $headlineFont;
-	text-transform: uppercase;
-    display: block;
-    color: #b3b3b1;
-    padding: 2em 0 .5em 0;
-    box-shadow: 0 1px 0 0 rgba(255,255,255,.5);
-    text-decoration: none;
-    @extend .transition;
-    &::after{
-    	content: "";
-    	display:block;
-    	width:1em;
-    	padding-bottom: 1.5em;
-    	border-bottom: 4px solid rgba(255,255,255, .8);
-    	&:hover{
-    		border-bottom: 9px solid rgba(255,255,255, .8);
-    		@extend .transitionHover;
-    	}
-    }
-    &:hover{
-    	color:$primHover;
-    	box-shadow: 0 3px 0 0 rgba(255,255,255,1);
-    }
-}
 
 
 /* Menu Movement */
 
-.pushy-right{
-    -webkit-transform: translate3d(1800px,0,0);
-    -moz-transform: translate3d(1800px,0,0);
-    -ms-transform: translate3d(1800px,0,0);
-    -o-transform: translate3d(1800px,0,0);
-    transform: translate3d(1800px,0,0);
+.pushy-left{
+    -webkit-transform: translate3d(420px,0,0);
+    -moz-transform: translate3d(420px,0,0);
+    -ms-transform: translate3d(420px,0,0);
+    -o-transform: translate3d(420px,0,0);
+    transform: translate3d(420px,0,0);
 }
 
 .pushy-open{
@@ -140,11 +197,11 @@ html, body{
 }
 
 .container-push, .push-push{
-    -webkit-transform: translate3d(-200px,0,0);
-    -moz-transform: translate3d(-200px,0,0);
-    -ms-transform: translate3d(-200px,0,0);
-    -o-transform: translate3d(-200px,0,0);
-    transform: translate3d(-200px,0,0);
+    -webkit-transform: translate3d(-420px,0,0);
+    -moz-transform: translate3d(-420px,0,0);
+    -ms-transform: translate3d(-420px,0,0);
+    -o-transform: translate3d(-420px,0,0);
+    transform: translate3d(-420px,0,0);
 }
 
 /* Menu Transitions */
