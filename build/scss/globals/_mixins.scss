@@ -1,16 +1,12 @@
 /* Helper Mixins
 ------------------------------------------------------------ */
 
-
-
-
 /* ==========================================================================
 
    Vertical Rhythm and Modular Scale with Baseline Grid by Justin Metros
    // inspired by www.gridlover.net
 
    ========================================================================== */
-
 
 // Sass Exponent Mixin
 @function exponent($base, $exponent) {
@@ -63,3 +59,4 @@
   padding-top: $bodyFontSize * $bodyLineHeight * $before;
   padding-bottom: $bodyFontSize * $bodyLineHeight * $after;
 }
+

@@ -1,0 +1,388 @@
+/* Layout
+------------------------------------------------------------ */
+
+.hero{
+	&.stitchHero{
+		@include background-image(linear-gradient(to top, rgba(0,0,0,.2), rgba(0,0,0,.2)), url("../img/project-page.jpg"));
+	}
+	.tagProject{
+		bottom:30%;
+		@include media($small){
+		}
+		h1{
+			font-size: 3.15em;
+			@include media($small){
+				line-height: 1.5em;
+			}
+			&::after{
+				border:none;
+				margin:0 auto;
+				@include media($small){
+				margin:0;
+				}
+			}
+		}
+	}
+}
+
+.projectBrief{
+	@include background-image(linear-gradient(to top, #E8E8E8, #EAE8E8));
+	padding:7.5% 0 6% 0;
+	margin-bottom: $margin;
+	.description{
+		@include span-columns(10);
+		border-color: lighten($secColor, 20%);
+		@include media($small){
+			@include span-columns(12);
+		}
+		&::after{
+			@extend .borderFlare;
+			border-color: lighten($secColor, 20%);
+			width:20%;
+		}
+		h4::after{
+			border:none;
+		}
+	}
+	.tags{
+		@include span-columns(2);
+		@include omega();
+		padding-top: 3.5%;
+		@include media($small){
+			@include span-columns(12);
+		}
+		li{
+			line-height: 2.7em;
+			@include media($small){
+				display:inline;
+				padding-right: 5%;
+			}
+		}
+	}
+}
+.topVideo{
+	margin-bottom: $margin;
+}
+.video{
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+	margin-bottom: 2.4%;
+	iframe{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+#main-content .content-editor .video-container {
+    height: 0;
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+.layout1{
+	margin-bottom: $margin;
+	img{
+		&:nth-child(1){
+			@include span-columns(6);
+		}
+	}
+	.column{
+		@include span-columns(6);
+		@include omega();
+		img:nth-child(1){
+			@include span-columns(6 of 6);
+			margin-bottom: 4.4%;
+		}
+		img:nth-child(2){
+			@include span-columns(6 of 6);
+			@include omega();
+		}
+	}
+}
+
+.layout2{
+	margin-bottom: $margin;
+	img{
+		&:nth-child(1){
+			@include span-columns(4);
+		}
+		&:nth-child(2){
+			@include span-columns(8);
+		}
+	}
+}
+
+.fullImg{
+	@extend .backgroundImage;
+	height:45em;
+	background-color: red;
+	margin-bottom: $margin;
+	@include media($medium){
+		height:34em;
+	}
+	@include media($small){
+		height:20em;
+	}
+	&.stitchGrid{
+		background-image: url("../img/hero.jpg");
+	}
+}
+
+.functionality{
+	margin-bottom: $margin;
+	img{
+		@include span-columns(4);
+	}
+	.info{
+		@include span-columns(8);
+		@include omega();
+	}
+
+}
+
+.textSnippet{
+	@include background-image(linear-gradient(to right, #AAA9A9, #A0A0A0));
+	padding:5% 0 5% 0;
+	margin-bottom: $margin;
+	@include media($medium){
+		padding: 16% 0 10% 0;
+	}
+	@include media($small){
+		padding: 23% 0 13% 0;
+	}
+	.wrapper{
+		visibility: hidden;
+	}
+	p{
+		font-size: 1.8em;
+		color:$primColor;
+		text-align: center;
+		letter-spacing: .15em;
+		line-height: 1.4em;
+		// border-top: 2px solid $primColor;
+		padding-top: 4%;
+		&::after{
+			padding-top: 4%;
+		}
+	}
+}
+
+
+
+
+
+
+
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+
+/* Browser Resets
+*********************************/
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
+
+
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {margin: 0; padding: 0;}
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .slides {display: block;}
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider { 
+  margin: 0 0 2.72em; 
+  position: relative; 
+  zoom: 1;
+}
+
+.flex-viewport { 
+	max-height: 600px; 
+	-webkit-transition: all 1s ease; 
+	-moz-transition: all 1s ease; 
+	-o-transition: all 1s ease; 
+	transition: all 1s ease; 
+}
+
+.loading .flex-viewport { 
+	max-height: 300px; 
+}
+.flexslider .slides { 
+	zoom: 1; 
+}
+.carousel li { 
+	margin-right: 5px; 
+}
+
+.flex-direction-nav {*height: 0;}
+.flex-direction-nav a  { 
+	text-decoration:none; 
+	display: block; 
+	max-width: 5em; 
+	width:100%; 
+	height:100%; 
+	margin: -25px 0 0; 
+	position: absolute; 
+	top: 50%; 
+	z-index: 10; 
+	overflow: hidden; 
+	opacity: 0; 
+	cursor: pointer; 
+	color: rgba(0,0,0,0.8); 
+	text-shadow: 1px 1px 0 rgba(255,255,255,1); 
+	-webkit-transition: all .3s ease; 
+	-moz-transition: all .3s ease; 
+	transition: all .3s ease; 
+	&:hover{
+		box-shadow: none;
+	}
+  }
+.flex-direction-nav .flex-prev { 
+	opacity:.75; 
+	left: 1.9em; 
+	@include media($medium) {
+		opacity: .95;
+		left: 1em; 
+	}
+	@include media($small) {
+		left: .4em; 
+	}
+}
+.flex-direction-nav .flex-next { 
+	opacity:.75; 
+	right: 1em; 
+	text-align: right; 
+	@include media($medium) {
+		opacity: .95;
+		right: -.7em; 
+		text-align: right; 
+	}
+	@include media($small) {
+		right: -2.5em; 
+		text-align: right; 
+	}
+}
+
+.flexslider:hover .flex-prev { 
+	opacity: 1; 
+}
+
+.flexslider:hover .flex-next { 
+	opacity: 1; 
+}
+
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover { 
+	opacity: 1; 
+}
+.flex-direction-nav .flex-disabled { 
+	opacity: 0!important; 
+	filter:alpha(opacity=0); 
+	cursor: default; 
+}
+.flex-direction-nav a:before  { 
+    display: block;
+    width: 4em;
+    height: 4em;
+    content: "";
+    border:3.5px solid white;
+    background: url("../img/icons/arrow.svg") no-repeat 3px;
+    background-size: 100%;
+    -webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+	@include media($medium) {
+		background-size: 100%;
+		width: 3em;
+		height: 3em;
+	
+	}
+	@include media($small) {
+		border:2px solid white;
+		width: 1.9em;
+		height: 1.9em;
+		background-position: 2px;
+	
+	}
+}
+.flex-direction-nav a.flex-next:before  { 
+	display: block;
+	content: "";
+	background: url("../img/icons/arrow.svg") no-repeat 1px;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	@include media($small) {
+		background-position: 1px;
+	
+	}
+ }
+
+// @include media($medium) {
+// 	.flex-direction-nav .flex-prev { opacity: .95;}
+// 	.flex-direction-nav .flex-next { opacity: .95;}
+// 	.flex-direction-nav a:before  { 
+// 		background-size: 100%;
+// 		width: 3em;
+// 		height: 3em;
+// 	}
+// 	.flex-direction-nav .flex-prev { 
+// 		left: 1em; 
+// 	}
+// 	.flex-direction-nav .flex-next { 
+// 		right: -.7em; text-align: right; 
+// 	}
+// }
+  
+// @include media($small){
+
+// 	.flex-direction-nav a:before  { 
+// 		border:2px solid white;
+// 		width: 1.9em;
+// 		height: 1.9em;
+// 		background-position: 2px;
+// 	}
+// 	.flex-direction-nav a.flex-next:before  { 
+// 		background-position: 1px;
+// 	}
+// 	.flex-direction-nav .flex-prev { 
+// 		left: .4em; 
+// 	}
+// 	.flex-direction-nav .flex-next { 
+// 		right: -2.5em; 
+// 		text-align: right; 
+// 	}
+// }

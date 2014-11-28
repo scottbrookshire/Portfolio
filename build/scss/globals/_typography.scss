@@ -2,9 +2,9 @@
 ------------------------------------------------------------ */
 
 // Modular Scale
-$bodyFontSize	           		: 18px;
+$bodyFontSize	           		: 19px;
 $bodyLineHeight		            : 1.5;
-$scaleFactor		            : 1.7; // http://modularscale.com/
+$scaleFactor		            : 2; // http://modularscale.com/
 
 body { @include rhythm(0); }
 
@@ -43,7 +43,7 @@ h2, .beta{
 	}
 }
 
-h3, h4, h5, h6{
+h3, h4, h5, h6, li{
 	font-family: $headlineFont;
 	text-transform: uppercase;
 	font-weight: regular;	
@@ -52,6 +52,29 @@ h3, h4, h5, h6{
 		letter-spacing: .1em;
 	}
 }
+
+h4{
+
+}
 p, a{
 	font-family: $bodyFont;
+	line-height: 1.9em;
+	letter-spacing: .0em;
+
+}
+
+.title{
+	font-weight: bold;
+	display:block;
+	font-size: 1.85em;
+	padding-bottom: .5em;
+	color:lighten($secColor, 10%);
+	&::after{
+		content: "";
+		display:block;
+		border-bottom: 4px solid lighten($secColor, 10%);;
+		width:3em;
+		padding:.5em 0 0 0;
+		
+	}
 }

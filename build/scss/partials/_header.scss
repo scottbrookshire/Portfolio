@@ -6,21 +6,25 @@ img {
 }
 
 
-header{
-	position:fixed;
-	width:100%;
-	padding:.8em;
-	z-index: 9990;
-        @include media($medium){
-            padding:0em;
-        }
-        @include media($small){
+// header{
+// 	position:fixed;
+// 	width:100%;
+// 	padding:.8em;
+// 	z-index: 9990;
+//         @include media($medium){
+//             padding:0em;
+//         }
+//         @include media($small){
             
-        }
-	a .logo{
+//         }
+	.logo{
+        position:fixed;
+        z-index: 9990;
 		max-width:7em;
 		width:100%;
 		padding-top: 0em;
+        height:30%;
+        // visibility: hidden;
 		@extend .transition;
         path, rect, circle{
             fill:$primColor;
@@ -28,22 +32,32 @@ header{
             @extend .transition;
             }
         &:hover path, &:hover circle, &:hover rect{
-            fill:black;
+            fill:$linkHover;
             @extend .transitionHover;
         }
+        &:active path, &:visited path{
+            fill:$linkHover;
+        }
         @include media($medium){
-            max-width:6em; 
+            max-width:6em;
+            // margin-top: -4.9em; 
+            height:10%;
         }
         @include media($small){
             max-width:4.8em; 
+            margin-left: -.5em;
+            margin-top: 0;
         }
 	}
 
 	.menu-btn{
-		float:right;
+        position:fixed;
+        z-index: 9990;
 		max-width:6em;
 		width:100%;
+        height:30%;
 		cursor:pointer;
+        right:0;
 		@extend .transition;
         path, rect, circle{
             fill:$primColor;
@@ -51,19 +65,26 @@ header{
             @extend .transition;
             }
         &:hover path, &:hover circle, &:hover rect{
-            fill:black;
+            fill:$linkHover;
             @extend .transitionHover;
+        }
+        &:active path, &:active circle, &:active rect{
+            fill:$linkHover;
         }
         @include media($medium){
             max-width:5em; 
+            // margin-top: -5.1em; 
+            height:10%;
         }
         @include media($small){
             max-width:4.3em; 
+            margin-right: -.5em;
+            margin-top: 0;
         }
         
 	}
-	@extend .slideUp;
-}
+	// @extend .slideUp;
+// }
 
 .xIcon{	
 	width:6em;
@@ -127,16 +148,25 @@ html, body{
         @include media($medium){
             padding-top: 3%;
         }
+        @include media($small){
+            letter-spacing: .35em;
+            margin-bottom: .7em;
+        }
     }
     p{
         color: #b3b3b1;
+        font-weight:200;
         font-size: .9em;
+        margin-bottom:0;
         letter-spacing: .05em;
         @include media($medium){
             margin-bottom:0;
         }
+        @include media($small){
+            line-height: 1.5em;
+        }
     }
-    a{
+   li a{
         font-size: 1.2em;
         font-weight: regular;
         letter-spacing: .4em;
@@ -153,6 +183,7 @@ html, body{
         }
         @include media($small){
             font-size: 1em;
+            padding-top: 1em;
         }
         &::after{
             content: "";
@@ -162,17 +193,31 @@ html, body{
             border-bottom: 4px solid rgba(255,255,255, .4);
             @extend .transition;
         }
-        &:hover{
+        &:hover, a:hover{
             // color:$primHover;
             // box-shadow: 0 2px 0 0 rgba(255,255,255,1);
-           color:#fff;
+           color:$linkHover;
             &::after{
                width:30%;
-                border-bottom: 4px solid rgba(255,255,255, .8);
+                border-bottom: 4px solid $linkHover;
                 @extend .transitionHover;
                 // -webkit-transition: all 400ms ease;
             }
         }
+    }
+    .contactMenu{
+        bottom:3%;
+        display:block;
+        position:absolute;
+        color:darken($primColor, 40%);
+        font-weight:200;
+        a{
+            color:darken($primColor, 10%);
+            &:hover{
+                color:$linkHover;
+            }
+        }
+
     }
 }
 

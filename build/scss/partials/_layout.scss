@@ -1,6 +1,31 @@
 /* Layout
 ------------------------------------------------------------ */
-.test{
-	color:red;
+body{
+	background-color: $bodyColor;
+	font-size: 1em;
+    line-height: 1.4;
 }
 
+.wrapper{
+	@include outer-container;
+	padding:0 4%;
+}
+
+$margin    :7%;
+
+// @extend styles.
+
+.borderFlare{
+  content: "";
+  display:block;
+  border-bottom: 4px solid $primColor;
+  width:3em;
+  padding:.25em 0 0 0;
+}
+
+.backgroundImage{
+  @include prefixer(background-size, cover, webkit moz o spec);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-position:50% 50%9 !important;
+}
