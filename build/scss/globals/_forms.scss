@@ -1,2 +1,18 @@
 /* Forms
 ------------------------------------------------------------ */
+
+.button{
+	a{
+		font-size: 1.05em;
+		padding:.8em 2em;
+		display:inline-block;
+		background-color: $secColor;
+		// border:2px solid $secColor;
+		text-transform: uppercase;
+		letter-spacing: .2em;
+		&:hover{
+			color:$primColor;
+			background-color: $linkHover;
+		}
+	}
+}

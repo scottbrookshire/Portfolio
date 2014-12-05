@@ -10,11 +10,16 @@ $secHover				: #000; //#E03243 Red
 $color3					: #333;
 
 $headlineColor			: #F1F1F1;
-$bodyColor          	: #F1F1F1;
+$bodyColor          	: #e8e8e8;
 
 $linkColor				: #F1F1F1;
-$linkHover				: #CC4058;
+$linkHover				: #fff; //CC4058
 
+// $projectColor1			: @include background-image(linear-gradient(to top, #C8CCCC, #C0C4C4));
+
+.projectGradient{
+	 @include background-image(linear-gradient(to top, #DBDDDD, #DBDDDD));
+}
 a{
 	text-decoration: none;
 	&:link, &:visited, &:active{
@@ -28,11 +33,11 @@ a{
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #ad3a55;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #ad3a55;
     text-shadow: none;
 }

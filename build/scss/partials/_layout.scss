@@ -8,10 +8,15 @@ body{
 
 .wrapper{
 	@include outer-container;
-	padding:0 4%;
-}
 
-$margin    :7%;
+  @media (max-width: 1250px){
+      padding:0 4%;
+    }
+}
+img{
+  width:100%;
+}
+$margin    :5%;
 
 // @extend styles.
 

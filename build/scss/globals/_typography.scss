@@ -27,7 +27,7 @@ h1, h2{
 	
 }
 h1{
-	letter-spacing: .15em;
+	letter-spacing: .2em;
 	line-height: 1.45em;
 	@include media ($small) { 
 		font-size: 2em;
@@ -36,7 +36,7 @@ h1{
 	}
 }
 h2, .beta{
-	letter-spacing: .2em;
+	letter-spacing: .25em;
 	@include media ($small) { 
 		font-size: 1.5em;
 		letter-spacing: .1em;
@@ -47,7 +47,7 @@ h3, h4, h5, h6, li{
 	font-family: $headlineFont;
 	text-transform: uppercase;
 	font-weight: regular;	
-	letter-spacing: .22em;
+	letter-spacing: .25em;
 	@include media ($small) { 
 		letter-spacing: .1em;
 	}
@@ -60,14 +60,16 @@ p, a{
 	font-family: $bodyFont;
 	line-height: 1.9em;
 	letter-spacing: .0em;
-
+	@include media($small){
+		line-height: 1.7em;
+	}
 }
 
 .title{
 	font-weight: bold;
 	display:block;
 	font-size: 1.85em;
-	padding-bottom: .5em;
+	padding-bottom: .9em;
 	color:lighten($secColor, 10%);
 	&::after{
 		content: "";
