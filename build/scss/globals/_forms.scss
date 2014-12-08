@@ -16,3 +16,28 @@
 		}
 	}
 }
+
+.projectNav{
+	@include outer-container;
+	margin-bottom:3em;
+	.after a{
+		background-color: #999;
+	}
+	.before a{
+		background-color: lighten(#191616, 5%);
+	}
+	a{
+		text-transform: uppercase;
+		letter-spacing: .2em;
+		width:50%;
+		background-color: #191616;
+		float:left;
+		text-align: center;
+		padding:1em;
+		&:hover{
+			background-color: $linkHover;
+			color:$primColor;
+		}
+	}
+	
+}

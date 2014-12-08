@@ -11,7 +11,7 @@
 			bottom:10%;
 		}
 		h1{
-			font-size: 3.15em;
+			font-size: 3.2em;
 			
 			&::after{
 				border:none;
@@ -98,6 +98,9 @@
 	img{
 		&:nth-child(1){
 			@include span-columns(6);
+			@include media($small){
+				@include span-columns(12);
+			}
 		}
 	}
 	.column{
@@ -107,10 +110,16 @@
 		img:nth-child(1){
 			@include span-columns(6 of 6);
 			margin-bottom: 5%;
+			@include media($small){
+				@include span-columns(12);
+			}
 		}
 		img:nth-child(2){
 			@include span-columns(6 of 6);
 			@include omega();
+			@include media($small){
+				@include span-columns(12);
+			}
 		}
 	}
 }
@@ -121,28 +130,28 @@
 		}
 	}
 
-.layout2{
-	.row{
-		@include span-columns(12);
-		padding-bottom: 2.1%;
-		img{
-			width:100%;
-		}
-	}
-	&.stitch{
-		
-		padding-top: $margin;
-		padding-bottom: $margin*.7;
-		background-color: #2c2326;
-	}
-}
 
-.layout3{
+
+.functionality2{
 	@include background-image(linear-gradient(to top, #222, #222));
 	padding-top: $margin;
 	padding-bottom: $margin;
 	.column {
 		@include span-columns(4);
+		@include media($small){
+				@include span-columns(12);
+			}
+
+		.group{
+			padding-top: 35%;
+			h4{
+				color:darken($primColor, 15%);
+			}
+			p{
+				color:darken($primColor, 35%);
+			}
+		}
+
 	}
 	.videoContainer{
 		position: relative;
@@ -150,6 +159,9 @@
 		height: 0;
 		margin-bottom: 2.4%;
 		@include span-columns(8);
+		@include media($small){
+				@include span-columns(12);
+			}
 		
 		iframe{
 			position: absolute;
@@ -175,7 +187,19 @@
 		background-image: url("../img/stitch-home2.jpg");
 	}
 }
-
+.fullImg2{
+	.row{
+		@include span-columns(12);
+		img{
+			width:100%;
+		}
+	}
+	&.stitch{
+		padding-top: $margin*.5;
+		padding-bottom: $margin*.5;
+		@include background-image(linear-gradient(to top, #222, #222));
+	}
+}
 .functionality{
 	padding-top: $margin;
 	padding-bottom: $margin;
@@ -183,16 +207,21 @@
 	img{
 		@include span-columns(5);
 		@include shift(1);
+		@include media($small){
+			@include span-columns(12);
+		}
 	}
 	.info{
-		@include span-columns(5);
-		@include omega();
 		visibility:hidden;
 		position:absolute;
 		top:40%;
 		left:53%;
+		@include span-columns(5);
+		@include omega();
+		@include media($small){
+			@include span-columns(12);
+		}
 	}
-
 }
 
 .textSnippet{

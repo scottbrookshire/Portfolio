@@ -8,12 +8,13 @@
 	}
 	.tag{
 		position:absolute;
-		max-width:30em;
+		max-width:50em;
 		width:100%;
 		bottom:20%;
 		left:50%;
-		margin-left:-15em;
+		margin-left:-25em;
 		text-align: center;
+
 		@include media($small){
 			text-align: left;
 			margin-left: 0;
@@ -55,7 +56,7 @@
 				line-height: 1.5em;
 			}
 		&::after{
-			@extend .borderFlare;
+			// @extend .borderFlare;
 			margin:0 auto;
 			@include media($small){
 				margin:0;
@@ -64,6 +65,7 @@
 
 		span{
 			font-weight: 100;
+			font-size: .5em;
 		}
 		@extend .slideRight;
 	}
@@ -87,10 +89,11 @@
 	background-color: black;
 	// @include background-image(linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.6)));
 	@extend .backgroundImage;
-	background-position: 50% 50%;
-	@extend .imgTransitionHover;
+	background-position: 50% 53%;
+	-webkit-transition:background-position 1000ms ease;
 	&:hover{
-			@extend .imgTransitionHover;
+			-webkit-transition:background-position 3000ms ease;
+			background-position: 50% 47%;
 		}
 	&:nth-child(1){
 		background-image: url("../img/stitch-home4.jpg");
@@ -198,21 +201,23 @@
 		width: 48%;
     	height:18.5em;
 		width: 33.333333333333333%;
-		background-position: 50% 50%;
-		@extend .transition;
+		background-position: 50% 55%;
+			-webkit-transition:background-position 3000ms ease;
 		@extend .backgroundImage;
 		@media (min-width:1500px){
 			height:21em;
 		}
 		@include media ($medium) { 
 			width: 50%;
-			background-color: red;
 		}
 
 		@include media ($small) { 
 			width: 100%;
 		}
-
+		&:hover{
+			background-position: 50% 45%;
+			-webkit-transition:background-position 1500ms ease;
+		}
 		&:nth-child(1){
 			background-image: url("../img/50logos-thumb2.jpg");
 			
@@ -232,11 +237,7 @@
 		&:nth-child(6){
 			background-image: url("../img/lacuna-thumb.jpg");
 		}
-		&:hover{
-			background-position: 50% 50%;
-			@extend .transitionHover;
 
-		}
 		@include media($medium){
 			height:17em;
 		}
@@ -415,7 +416,7 @@ figure figcaption > a {
 
 #homeAbout{
 	clear: both;
-	@include background-image(linear-gradient(to right, #F5F4F3, #EEE9EB));
+	@extend .projectGradient;
 	padding:10% 0 7% 0;
 	@include media($medium){
 		padding: 16% 0 10% 0;
@@ -432,18 +433,18 @@ figure figcaption > a {
 		line-height: 1.4em;
 		// border-top: 2px solid $primColor;
 		padding-top: 4%;
-		color:lighten($color3, 20%);
-		border-top: 4px solid lighten($color3, 40%);
+		color:lighten($secColor, 20%);
+		border-top: 4px solid lighten($secColor, 40%);
 		&::after{
 			padding-top: 4%;
 			@extend .borderFlare;
-			border-color: lighten($color3, 50%);
+			border-color: lighten($secColor, 50%);
 		}
 	}
 	p{
 		font-size: 1.2em;
 		letter-spacing: .1em;
-		color:lighten($color3, 50%);
+		color:lighten($secColor, 50%);
 	}
 
 }
