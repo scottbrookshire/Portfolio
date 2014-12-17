@@ -11,7 +11,7 @@
 		text-transform: uppercase;
 		letter-spacing: .2em;
 		&:hover{
-			color:$primColor;
+			color:black;
 			background-color: $linkHover;
 		}
 	}
@@ -21,7 +21,7 @@
 	@include outer-container;
 	margin-bottom:3em;
 	.after a{
-		background-color: #999;
+		background-color: lighten(#191616, 15%);
 	}
 	.before a{
 		background-color: lighten(#191616, 5%);
@@ -36,7 +36,7 @@
 		padding:1em;
 		&:hover{
 			background-color: $linkHover;
-			color:$primColor;
+			color:black;
 		}
 	}
 	

@@ -60,7 +60,8 @@ h4{
 p, a{
 	font-family: $bodyFont;
 	line-height: 1.9em;
-	letter-spacing: .0em;
+	color:#888;
+	letter-spacing: .03em;
 	@include media($small){
 		line-height: 1.7em;
 	}
@@ -70,6 +71,7 @@ p, a{
 	visibility: hidden;
 	font-weight: bold;
 	display:block;
+	line-height: 1.3em;
 	font-size: 1.85em;
 	padding-bottom: .9em;
 	color:lighten($secColor, 10%);
@@ -80,5 +82,13 @@ p, a{
 		width:3em;
 		padding:.5em 0 0 0;
 		
+	}
+}
+
+a.bodyLink{
+	color:#331C1C;
+	font-weight: bold;
+	&:hover{
+		color:$tertColor;
 	}
 }

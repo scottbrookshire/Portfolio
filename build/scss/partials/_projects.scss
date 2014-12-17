@@ -5,6 +5,24 @@
 	&.stitchHero{
 		@include background-image(linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../img/stitch-hero5.jpg"));
 	}
+	&.enrichHero{
+		@include background-image(linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../img/enrich-hero.jpg"));
+	}
+	&.oaklanizeHero{
+		@include background-image(linear-gradient(to top, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("../img/oaklanize-hero1.jpg"));
+	}
+	&.logosHero{
+		@include background-image(linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../img/50logos-hero3.jpg"));
+	}
+	&.sageHero{
+		@include background-image(linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../img/sage-hero.jpg"));
+	}
+	&.posterHero{
+		@include background-image(linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../img/posters-hero.jpg"));
+	}
+	&.lacunaHero{
+		@include background-image(linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../img/lacuna-hero.jpg"));
+	}
 	.tagProject{
 		bottom:30%;
 		@include media($small){
@@ -27,6 +45,7 @@
 .projectBrief{
 	@extend .projectGradient;
 	padding:7.5% 0 6% 0;
+	z-index: 500;
 	
 	@include media($medium){
 		padding:10% 0 10% 0;
@@ -37,30 +56,32 @@
 	.wrapper{
 		visibility:hidden;
 	}
+	.descriptionHeader{
+				h4::after{
+			border:none;
+		}
+	}
 	.description{
 		@include span-columns(10);
 		border-color: lighten($secColor, 20%);
 		@include media($small){
 			@include span-columns(12);
+			padding-bottom: 2em;
 		}
 		&::after{
 			@extend .borderFlare;
 			border-color: lighten($secColor, 20%);
 			width:20%;
 		}
-		h4::after{
-			border:none;
-		}
 	}
 	.tags{
 		@include span-columns(2);
 		@include omega();
-		padding-top: 3.5%;
 		@include media($small){
 			@include span-columns(12);
 		}
 		li{
-			line-height: 2.7em;
+			padding-bottom: 1.4em;
 			@include media($small){
 				display:inline;
 				padding-right: 5%;
@@ -103,6 +124,7 @@
 			}
 		}
 	}
+
 	.column{
 		@include span-columns(6);
 		@include omega();
@@ -129,9 +151,57 @@
 			width:100%;
 		}
 	}
+.layout4{
+	padding-top: $margin;
+	padding-bottom: $margin;
+	img:nth-child(odd){
+		@include span-columns(6);
+		@include media($small){
+			@include span-columns(12);
+			@include omega();
+			padding-bottom: 5%;		
+		}
+	}
+	&.odd{
+		@extend .projectGradient;
+	}
+	img:nth-child(even){
+		@include span-columns(6);
+		@include omega();
+		@include media($small){
+			@include span-columns(12);
+			padding-bottom: 5%;
+			
+		}
+	}
+	img:nth-child(3), img:nth-child(4){
+		padding-top: 2.5%;
+		@include media($small){
+			padding-top: 0;
+		}
+	}
+	&.enrich{
+		@include background-image(linear-gradient(to top, #222, #222));
+	}
+	&.logos{
+		padding-top: 0;
+	}
+}
 
-
-
+.layout5{
+	padding-top: $margin;
+	padding-bottom: $margin;
+	.row{
+		padding-bottom: $margin;
+		img{
+			@include span-columns(4);
+			padding:0 1.5em;
+		}
+		img:last-child{
+			@include omega();
+		}
+	}
+}
 .functionality2{
 	@include background-image(linear-gradient(to top, #222, #222));
 	padding-top: $margin;
@@ -186,8 +256,28 @@
 	&.stitchGrid{
 		background-image: url("../img/stitch-home2.jpg");
 	}
+	&.enrichFull{
+		background-image: url("../img/enrich-full-dashboard.jpg");
+	}
+	&.enrichFull2{
+		background-image: url("../img/enrich-full2.jpg");
+	}
+	&.oaklanizeAppGrid{
+		background-image: url("../img/oaklanize-macbook.jpg");
+	}
+	&.oaklanizeMockup{
+		background-image: url("../img/oaklanize-app_grid.jpg");
+	}
+	&.sageMockup{
+		background-image: url("../img/sage-mockup.jpg");
+	}
+	&.lacunaMockup{
+		background-image: url("../img/lacuna-mockup.jpg");
+	}
 }
-.fullImg2{
+.fullImgContain{
+	padding-top: $margin;
+	padding-bottom: $margin;
 	.row{
 		@include span-columns(12);
 		img{
@@ -205,11 +295,14 @@
 	padding-bottom: $margin;
 	position:relative;
 	img{
-		@include span-columns(5);
-		@include shift(1);
+		@include span-columns(6);
+		
 		@include media($small){
 			@include span-columns(12);
 		}
+	}
+	&.invision img{
+		padding-left:10em;
 	}
 	.info{
 		visibility:hidden;
@@ -334,6 +427,7 @@ html[xmlns] .slides {display: block;}
 }
 .flexslider .slides { 
 	zoom: 1; 
+	-webkit-filter:contrast(0.7);
 }
 .carousel li { 
 	margin-right: 5px; 

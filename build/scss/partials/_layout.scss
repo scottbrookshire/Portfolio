@@ -18,6 +18,48 @@ img{
 }
 $margin    :5%;
 
+#main{
+    
+  &.home{
+    @include media($medium){
+      background:url("../img/home-hero.jpg") no-repeat;
+      background-size: cover;
+    }
+  }
+  &.aboutHero{
+    @include media($medium){
+      background:url("../img/about-hero.jpg") no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+video {
+  position:absolute;
+  right:0;
+  top:0;
+  min-width: 100%; 
+  min-height: 100%; 
+  width: auto; 
+  height:auto;
+  z-index: -100; 
+  background:url("../img/home-hero.jpg") no-repeat;
+  background-size: cover;
+    //Media
+    // @include media($medium){
+    // position:relative;
+    // display:none;}
+    // .home{
+    // background:url("../img/home-hero.jpg") no-repeat;
+    // @extend .backgroundImage;
+    // }
+}
+
+#bgvid{
+    @include media($medium){
+    display:none;}
+}
+
 // @extend styles.
 
 .borderFlare{
