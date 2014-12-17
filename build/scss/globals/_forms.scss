@@ -34,6 +34,17 @@
 		float:left;
 		text-align: center;
 		padding:1em;
+		@include media($small){
+
+		}
+		@media (max-width:500px){
+			letter-spacing: .05em;
+
+		}
+		@media (max-width:400px){
+			letter-spacing: .05em;
+			font-size: .8em;
+		}
 		&:hover{
 			background-color: $linkHover;
 			color:black;

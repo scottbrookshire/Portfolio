@@ -224,6 +224,13 @@ a.bodyLink {
     float: left;
     text-align: center;
     padding: 1em; }
+    @media (max-width: 500px) {
+      .projectNav a {
+        letter-spacing: .05em; } }
+    @media (max-width: 400px) {
+      .projectNav a {
+        letter-spacing: .05em;
+        font-size: .8em; } }
     .projectNav a:hover {
       background-color: white;
       color: black; }
@@ -1033,6 +1040,9 @@ figure figcaption > a {
 .hero.lacunaHero {
   background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/lacuna-hero.jpg");
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/lacuna-hero.jpg"); }
+.hero.visualizerHero {
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/visualizer-hero.jpg");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/visualizer-hero.jpg"); }
 .hero .tagProject {
   bottom: 30%; }
   @media screen and (max-width: 640px) {
@@ -1152,6 +1162,14 @@ figure figcaption > a {
     padding-bottom: 2.5%; }
     .layout1 .column:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 640px) {
+      .layout1 .column {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        .layout1 .column:last-child {
+          margin-right: 0; } }
     .layout1 .column img:nth-child(1) {
       float: left;
       display: block;
@@ -1162,6 +1180,7 @@ figure figcaption > a {
         margin-right: 0; }
       @media screen and (max-width: 640px) {
         .layout1 .column img:nth-child(1) {
+          padding-top: 5%;
           float: left;
           display: block;
           margin-right: 2.35765%;
@@ -1262,7 +1281,7 @@ figure figcaption > a {
 .functionality2 {
   background-image: -webkit-linear-gradient(bottom, #222222, #222222);
   background-image: linear-gradient(to top, #222222, #222222);
-  padding-top: 5%;
+  padding-top: 6.5%;
   padding-bottom: 5%; }
   .functionality2 .column {
     float: left;
@@ -1281,6 +1300,12 @@ figure figcaption > a {
           margin-right: 0; } }
     .functionality2 .column .group {
       padding-top: 35%; }
+      @media screen and (max-width: 899px) {
+        .functionality2 .column .group {
+          padding-top: 10%; } }
+      @media screen and (max-width: 640px) {
+        .functionality2 .column .group {
+          padding-top: 0; } }
       .functionality2 .column .group h4 {
         color: #cec7c7; }
       .functionality2 .column .group p {
@@ -1369,11 +1394,16 @@ figure figcaption > a {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 100%; }
+        width: 100%;
+        padding-top: 5%; }
         .functionality img:last-child {
           margin-right: 0; } }
   .functionality.invision img {
     padding-left: 10em; }
+    @media screen and (max-width: 640px) {
+      .functionality.invision img {
+        padding: 0 5em;
+        padding-top: 5%; } }
   .functionality .info {
     visibility: hidden;
     position: absolute;
@@ -1386,12 +1416,19 @@ figure figcaption > a {
     margin-right: 0; }
     .functionality .info:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 899px) {
+      .functionality .info {
+        top: 15%; } }
     @media screen and (max-width: 640px) {
       .functionality .info {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 100%; }
+        width: 100%;
+        position: relative;
+        left: 0;
+        top: 0;
+        padding-top: 1em; }
         .functionality .info:last-child {
           margin-right: 0; } }
 
@@ -1399,10 +1436,10 @@ figure figcaption > a {
   padding: 6% 0 6% 0; }
   @media screen and (max-width: 899px) {
     .textSnippet {
-      padding: 16% 0 10% 0; } }
+      padding: 8% 0 7% 0; } }
   @media screen and (max-width: 640px) {
     .textSnippet {
-      padding: 23% 0 13% 0; } }
+      padding: 5% 0 5% 0; } }
   .textSnippet .wrapper {
     visibility: hidden; }
   .textSnippet p {
@@ -1413,6 +1450,9 @@ figure figcaption > a {
     letter-spacing: .15em;
     line-height: 1.4em;
     padding-top: 4%; }
+    @media screen and (max-width: 640px) {
+      .textSnippet p {
+        font-size: 1.35em; } }
     .textSnippet p::after {
       padding-top: 4%; }
 
@@ -1552,7 +1592,7 @@ html[xmlns] .slides {
       left: 1em; } }
   @media screen and (max-width: 640px) {
     .flex-direction-nav .flex-prev {
-      left: .4em; } }
+      left: .95em; } }
 
 .flex-direction-nav .flex-next {
   opacity: .75;
@@ -1565,7 +1605,8 @@ html[xmlns] .slides {
       text-align: right; } }
   @media screen and (max-width: 640px) {
     .flex-direction-nav .flex-next {
-      right: -2.5em;
+      margin-right: .85em;
+      max-width: 2.75em;
       text-align: right; } }
 
 .flexslider:hover .flex-prev {

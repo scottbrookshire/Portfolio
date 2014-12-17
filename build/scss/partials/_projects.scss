@@ -23,6 +23,9 @@
 	&.lacunaHero{
 		@include background-image(linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../img/lacuna-hero.jpg"));
 	}
+	&.visualizerHero{
+		@include background-image(linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../img/visualizer-hero.jpg"));
+	}
 	.tagProject{
 		bottom:30%;
 		@include media($small){
@@ -121,6 +124,7 @@
 			@include span-columns(6);
 			@include media($small){
 				@include span-columns(12);
+
 			}
 		}
 	}
@@ -129,10 +133,14 @@
 		@include span-columns(6);
 		@include omega();
 		padding-bottom: 2.5%;
+		@include media ($small){
+			@include span-columns(12);
+		}
 		img:nth-child(1){
 			@include span-columns(6 of 6);
 			margin-bottom: 5%;
 			@include media($small){
+				padding-top: $margin;
 				@include span-columns(12);
 			}
 		}
@@ -204,16 +212,22 @@
 }
 .functionality2{
 	@include background-image(linear-gradient(to top, #222, #222));
-	padding-top: $margin;
+	padding-top: $margin*1.3;
 	padding-bottom: $margin;
 	.column {
 		@include span-columns(4);
 		@include media($small){
-				@include span-columns(12);
-			}
+			@include span-columns(12);
+		}
 
 		.group{
 			padding-top: 35%;
+			@include media($medium){
+				padding-top: 10%;
+			}
+			@include media($small){
+				padding-top: 0;
+			}			
 			h4{
 				color:darken($primColor, 15%);
 			}
@@ -299,10 +313,15 @@
 		
 		@include media($small){
 			@include span-columns(12);
+			padding-top: $margin;
 		}
 	}
 	&.invision img{
 		padding-left:10em;
+		@include media($small){
+			padding:0 5em;
+				padding-top: $margin;
+		}
 	}
 	.info{
 		visibility:hidden;
@@ -311,8 +330,15 @@
 		left:53%;
 		@include span-columns(5);
 		@include omega();
+		@include media($medium){
+			top:15%;
+		}
 		@include media($small){
 			@include span-columns(12);
+			position:relative;
+			left:0;
+			top:0;
+			padding-top: 1em;
 		}
 	}
 }
@@ -321,10 +347,10 @@
 	@extend .projectGradient;
 	padding:6% 0 6% 0;
 	@include media($medium){
-		padding: 16% 0 10% 0;
+		padding: 8% 0 7% 0;
 	}
 	@include media($small){
-		padding: 23% 0 13% 0;
+		padding: 5% 0 5% 0;
 	}
 	.wrapper{
 		visibility: hidden;
@@ -338,6 +364,9 @@
 		line-height: 1.4em;
 		// border-top: 2px solid $primColor;
 		padding-top: 4%;
+		@include media($small){
+			font-size: 1.35em;
+		}
 		&::after{
 			padding-top: 4%;
 		}
@@ -412,6 +441,9 @@ html[xmlns] .slides {display: block;}
 }
 .process{
 	padding-top: $margin;
+	@include media($small){
+
+	}
 
 }
 .flex-viewport { 
@@ -464,7 +496,7 @@ html[xmlns] .slides {display: block;}
 		left: 1em; 
 	}
 	@include media($small) {
-		left: .4em; 
+		left: .95em; 
 	}
 }
 .flex-direction-nav .flex-next { 
@@ -477,7 +509,8 @@ html[xmlns] .slides {display: block;}
 		text-align: right; 
 	}
 	@include media($small) {
-		right: -2.5em; 
+		margin-right: .85em;
+		max-width: 2.75em;
 		text-align: right; 
 	}
 }
