@@ -18,21 +18,7 @@ img{
 }
 $margin    :5%;
 
-#main{
-    
-  &.home{
-    @include media($medium){
-      background:url("../img/home-hero.jpg") no-repeat;
-      background-size: cover;
-    }
-  }
-  &.aboutHero{
-    @include media($medium){
-      background:url("../img/about-hero.jpg") no-repeat;
-      background-size: cover;
-    }
-  }
-}
+
 
 video {
   position:absolute;
@@ -45,14 +31,6 @@ video {
   z-index: -100; 
   background:url("../img/home-hero.jpg") no-repeat;
   background-size: cover;
-    //Media
-    // @include media($medium){
-    // position:relative;
-    // display:none;}
-    // .home{
-    // background:url("../img/home-hero.jpg") no-repeat;
-    // @extend .backgroundImage;
-    // }
 }
 
 #bgvid{
@@ -75,4 +53,27 @@ video {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-position:50% 50%9 !important;
+}
+
+#main{
+    
+  &.home{
+    @include media($medium){
+      background:url("../img/home-hero.jpg") no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  }
+  &.aboutHero{
+    @include media($medium){
+      background:url("../img/about-hero2.jpg") no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-position: 50% 60%;
+    }
+  }
 }

@@ -33,11 +33,11 @@ a{
 }
 
 ::-moz-selection {
-    background: #ad3a55;
+    background: $tertColor;
     text-shadow: none;
 }
 
 ::selection {
-    background: #ad3a55;
+    background: $tertColor;
     text-shadow: none;
 }

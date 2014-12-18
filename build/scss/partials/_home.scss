@@ -11,11 +11,12 @@
 	// }
 	.tag{
 		position:absolute;
-		max-width:50em;
+		// max-width:50em;
 		width:100%;
 		bottom:30%;
-		left:50%;
-		margin-left:-25em;
+		// bottom:30%;
+		// left:50%;
+		// margin-left:-25em;
 		text-align: center;
 
 		@include media($small){
@@ -65,7 +66,6 @@
 				margin:0;
 			}
 		}
-
 		span{
 			font-weight: 100;
 			font-size: .5em;
@@ -88,7 +88,7 @@
 
 .topProject{
 	width:100%;
-	height:33em;
+	height:34.5em;
 	background-color: black;
 	// @include background-image(linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.6)));
 	@extend .backgroundImage;
@@ -127,7 +127,7 @@
 	}
 	
 	.wrapper{
-		padding-top: 13em;
+		padding-top: 15em;
 		margin:0 auto;
 		cursor:pointer;
 		&:nth-child(2){
@@ -229,7 +229,7 @@
 			background-image: url("../img/sage-thumb.jpg");
 		}
 		&:nth-child(3){
-			background-image: url("../img/grid2.jpg");
+			background-image: url("../img/stellar-thumb.jpg");
 		}
 		&:nth-child(4){
 			background-image: url("../img/seasons-thumb.jpg");
@@ -249,7 +249,7 @@
 		}
 	}
 	.gridTitle{
-		padding:5em 0 0 10%;
+		padding:7em 0 0 10%;
 		h2{
 			font-size: 1.5em;
 			line-height: 1.5em;
