@@ -9,6 +9,9 @@ footer{
 	@media (min-width: 1300px){
 			@include linear-gradient(to right, #232121 60%, $tertColor 60%, $fallback: #333);
 		}
+	.wrapper{
+		visibility: hidden;
+	}
 	.socialFoot{
 	
 		// width:66.666666666666%;
