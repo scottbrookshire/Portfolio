@@ -35,7 +35,6 @@
 	.tagProject{
 		bottom:30%;
 		@include media($small){
-			bottom:10%;
 		}
 		h1{
 			font-size: 3.7em;
@@ -161,7 +160,7 @@
 			@include span-columns(6 of 6);
 			margin-bottom: 5%;
 			@include media($small){
-				padding-top: $margin;
+				padding-top: 10%;
 				@include span-columns(12);
 			}
 		}
@@ -170,6 +169,7 @@
 			@include omega();
 			@include media($small){
 				@include span-columns(12);
+				padding-top: 5%;
 			}
 		}
 	}
@@ -192,7 +192,7 @@
 		@include media($small){
 			@include span-columns(12);
 			@include omega();
-			padding-bottom: 5%;		
+			padding-bottom: 10%;		
 		}
 	}
 	&.odd{
@@ -203,7 +203,7 @@
 		@include omega();
 		@include media($small){
 			@include span-columns(12);
-			padding-bottom: 5%;
+			padding-bottom: 10%;
 			
 		}
 	}

@@ -1,15 +1,45 @@
 # humanstxt.org/
 # The humans responsible & technology colophon
 
-# TEAM
+# TEAM OF PEERS
 
-    <name> -- <role> -- <twitter>
+    Thank for the guidance and help from all my peers, friends, fellow geeks. Especially those who collaborated with my projects. 
 
-# THANKS
+# THANKS TO MY TEACHERS
 
-    <name>
+    To everyone who helped me along the way – all of my teachers including Justin Metros, Greg Mar, DC Scarpelli, Ryan Berkey and Colin Sebastian.
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    Normalize.css, jQuery, Modernizr
+    HTML5, SCSS, CSS3
+    Bourbon, Bourbon Neat
+    jQuery, Modernizr
+    p5.js, TWEEN.js, DATGUI
+    Flexslider
+
+
+
+
+
+░░░░░░░░░▀█▄▄░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░▄▄▀▀▀▀▀▀░▀█▄░░░░░░░░░░░░░░░▄▄▄▄░░░░░
+░░░░██▀▀░░░░░░░▀█▄░░░░░░░░░▄▄▀▀░░██▄▄░░░
+░▄█▀░░░░░░░▀█▄░░░▀█░░░░░░▄█▀░░░░░░░░▀▀▄░
+██▄▄░░░░░▄▄░░▀░░░░░█▄░▄░█▀░░░▄▀░░░░▄▀▀▀░
+░░▄█▀░░░░░░▀░░░░░░░░████░░░░▀░░░░░░░▀▀▄░
+▄█▄▄░░░▀▀▄░░▄▄█▀▀▀▀▀▀█▄▀▀▀█▄▄░▄▀▀▀░░░▄▄█
+▀▀░▄▀░░░▄█▀▀█░░░░▄░░░░░▄▀▀▀█▀▀▄▄░░░██░░░
+░░▀▀▀▀▄▄▀█▄█▀░░█▀░░░░░░░▀▄█▀░░░▀▄██▀▀░░░
+░░░░░░░█▄▄░░░░░░▀▀░░░░░░░░░░░░▄▄█░░░░░░░
+░░░░░░░░░█▄▄░░░░░░░░░▄▄▄█░░░░▄█░░░░░░░░░
+░░░░░░░░░░░█▄▄░░░░░░░░░░░░░░▄█░░░░░░░░░░
+░░░░░░░░░░░░▀▀▀▀█░░░▄▄▄███▀▀▀░░░░░░░░░░░
+░░░░░░░░░░▄▄▄▄▀██▄▄▄██▄▄▄░░░░░░░░░░░░░░░
+░░░░░░░░▄▀░▄▄█▀░░░░░░▄▄▄░▀█▄░░░░░░░░░░░░
+░░░░░░░░█░░██░░░░░░░░█░░█░░▀█░░░░░░░░░░░
+░░░░░░░░██▄██░░░░░░░░█▄▄▀▄▄█▀░░░░░░░░░░░
+░░░░░░░░░░███░░░░░░░░███▀░░░░░░░░░░░░░░░
+░░░░░░░░░░░▀███▄▄████▀░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░█████████░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░███░░░███░░░░░░░░░░░░░░░░░░░
+

@@ -18,7 +18,7 @@ $linkHover				: #fff; //CC4058
 // $projectColor1			: @include background-image(linear-gradient(to top, #C8CCCC, #C0C4C4));
 
 .projectGradient{
-	 @include background-image(linear-gradient(to top, #DBDDDD, #DBDDDD));
+	 @include background-image(linear-gradient(to left, #D3D3D3, #D8D8D8));
 }
 a{
 	text-decoration: none;

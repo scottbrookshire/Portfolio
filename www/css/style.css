@@ -65,8 +65,8 @@ a, a:hover, a:focus, a:active {
 /* Colors
 ------------------------------------------------------------ */
 .projectGradient, #homeAbout, .projectBrief, .topVideo.lacuna, .layout4.odd, .textSnippet, .invision {
-  background-image: -webkit-linear-gradient(bottom, #dbdddd, #dbdddd);
-  background-image: linear-gradient(to top, #dbdddd, #dbdddd); }
+  background-image: -webkit-linear-gradient(right, lightgrey, #d8d8d8);
+  background-image: linear-gradient(to left, lightgrey, #d8d8d8); }
 
 a {
   text-decoration: none; }
@@ -761,14 +761,6 @@ html, body {
   width: 100%;
   bottom: 30%;
   text-align: center; }
-  @media screen and (max-width: 640px) {
-    .hero .tag {
-      text-align: left;
-      margin-left: 0;
-      left: 4%;
-      bottom: 14%;
-      max-width: 100%;
-      width: inherit; } }
 .hero .arrow {
   max-width: 8em;
   width: 100%;
@@ -800,6 +792,9 @@ html, body {
   .hero h1 span {
     font-weight: 100;
     font-size: .5em; }
+    @media screen and (max-width: 640px) {
+      .hero h1 span {
+        letter-spacing: .35em; } }
 .hero p {
   color: #f2f0f0;
   letter-spacing: .05em;
@@ -1076,9 +1071,6 @@ figure figcaption > a {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/stellar-hero.jpg"); }
 .hero .tagProject {
   bottom: 30%; }
-  @media screen and (max-width: 640px) {
-    .hero .tagProject {
-      bottom: 10%; } }
   .hero .tagProject h1 {
     font-size: 3.7em; }
     @media screen and (max-width: 640px) {
@@ -1224,7 +1216,7 @@ figure figcaption > a {
         margin-right: 0; }
       @media screen and (max-width: 640px) {
         .layout1 .column img:nth-child(1) {
-          padding-top: 6%;
+          padding-top: 10%;
           float: left;
           display: block;
           margin-right: 2.35765%;
@@ -1244,7 +1236,8 @@ figure figcaption > a {
           float: left;
           display: block;
           margin-right: 2.35765%;
-          width: 100%; }
+          width: 100%;
+          padding-top: 5%; }
           .layout1 .column img:nth-child(2):last-child {
             margin-right: 0; } }
 
@@ -1279,7 +1272,7 @@ figure figcaption > a {
         margin-right: 2.35765%;
         width: 100%;
         margin-right: 0;
-        padding-bottom: 5%; }
+        padding-bottom: 10%; }
         .layout4 img:nth-child(odd):last-child {
           margin-right: 0; } }
   .layout4 img:nth-child(even) {
@@ -1296,7 +1289,7 @@ figure figcaption > a {
         display: block;
         margin-right: 2.35765%;
         width: 100%;
-        padding-bottom: 5%; }
+        padding-bottom: 10%; }
         .layout4 img:nth-child(even):last-child {
           margin-right: 0; } }
   .layout4 img:nth-child(3), .layout4 img:nth-child(4) {
