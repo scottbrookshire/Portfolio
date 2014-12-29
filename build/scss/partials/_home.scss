@@ -42,7 +42,7 @@
 		@include media($small){
 			// display:none;
 			max-width: 5em;
-			left:90%;
+			margin-left:-2.5em;
 		}
 		polygon{
             fill:$primColor;
@@ -161,7 +161,7 @@
 
 	}
 	h3{
-		font-weight: 400;
+		font-weight: 100;
 		color:white;
 		clear:both;
 		display:block;
@@ -202,7 +202,7 @@
     	margin: 0 0 0 0;
     	list-style: none;
 		width: 48%;
-    	height:18.5em;
+    	height:22em;
 		width: 33.333333333333333%;
 		background-position: 50% 55%;
 			-webkit-transition:background-position 500ms ease;
@@ -218,7 +218,7 @@
 			width: 100%;
 		}
 		&:hover{
-			background-position: 50% 20%;
+			background-position: 50% 10%;
 			-webkit-transition:background-position 1000ms ease;
 		}
 		&:nth-child(1){
@@ -249,7 +249,7 @@
 		}
 	}
 	.gridTitle{
-		padding:7em 0 0 10%;
+		padding:10em 0 0 10%;
 		h2{
 			font-size: 1.5em;
 			line-height: 1.5em;
@@ -283,18 +283,6 @@
 	}
 
 }
-
-// .colorOverlay{
-// 	background-color: rgba(0,0,0,.4);
-// 	width:100%;
-// 	height:100%;
-// 	position:relative;
-// 	@extend .imgTransition;
-// }
-// .projectHover{
-// 	background-color: rgba(0,0,0,.2);
-// 	@extend .imgTransitionHover;
-// }
 
 
 
@@ -425,7 +413,7 @@ figure figcaption > a {
 		padding: 16% 0 10% 0;
 	}
 	@include media($small){
-		padding: 23% 0 13% 0;
+		padding: 17% 0 8% 0;
 	}
 	.wrapper{
 		visibility: hidden;
@@ -447,7 +435,10 @@ figure figcaption > a {
 	p{
 		font-size: 1.2em;
 		letter-spacing: .1em;
-		color:lighten($secColor, 50%);
+		color:lighten($secColor, 40%);
+		@include media($small){
+			font-size: 1em;
+		}
 	}
 
 }

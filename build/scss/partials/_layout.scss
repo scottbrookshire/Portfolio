@@ -3,7 +3,10 @@
 body{
 	background-color: $bodyColor;
 	font-size: 1em;
-    line-height: 1.4;
+  line-height: 1.4;
+  @include media($small){
+    font-size: 1em;
+  }
 }
 
 .wrapper{
@@ -16,8 +19,8 @@ body{
 img{
   width:100%;
 }
-$margin    :5%;
-
+$margin    :6%;
+$marginMobile    :13%;
 
 
 video {

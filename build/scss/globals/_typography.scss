@@ -33,14 +33,14 @@ h1{
 	@include media ($small) { 
 		font-size: 2em;
 		line-height: 1.3em;
-		letter-spacing: .1em;
+		letter-spacing: .2em;
 	}
 }
 h2, .beta{
 	letter-spacing: .29em;
 	@include media ($small) { 
 		font-size: 1.5em;
-		letter-spacing: .1em;
+		letter-spacing: .2em;
 	}
 }
 
@@ -53,10 +53,17 @@ h3, h4, h5, h6, li{
 		letter-spacing: .1em;
 	}
 }
-
-h4{
-
+li{
+	@include media ($small) { 
+		font-size: .9em;
+	}
 }
+h3{
+	@include media ($small) { 
+		font-size: 1em;
+	}
+}
+
 p, a{
 	font-family: $bodyFont;
 	line-height: 1.9em;
@@ -64,6 +71,8 @@ p, a{
 	letter-spacing: .03em;
 	@include media($small){
 		line-height: 1.7em;
+		font-family: $bodyFont;
+		font-size: .9em;
 	}
 }
 
@@ -75,6 +84,9 @@ p, a{
 	font-size: 1.85em;
 	padding-bottom: .9em;
 	color:lighten($secColor, 10%);
+	@include media ($small) { 
+		font-size: 1.35em;
+	}
 	&::after{
 		content: "";
 		display:block;

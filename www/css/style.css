@@ -64,7 +64,7 @@ a, a:hover, a:focus, a:active {
    ========================================================================== */
 /* Colors
 ------------------------------------------------------------ */
-.projectGradient, #homeAbout, .projectBrief, .layout4.odd, .textSnippet, .invision {
+.projectGradient, #homeAbout, .projectBrief, .topVideo.lacuna, .layout4.odd, .textSnippet, .invision {
   background-image: -webkit-linear-gradient(bottom, #dbdddd, #dbdddd);
   background-image: linear-gradient(to top, #dbdddd, #dbdddd); }
 
@@ -140,14 +140,14 @@ h1 {
     h1 {
       font-size: 2em;
       line-height: 1.3em;
-      letter-spacing: .1em; } }
+      letter-spacing: .2em; } }
 
 h2, .beta {
   letter-spacing: .29em; }
   @media screen and (max-width: 640px) {
     h2, .beta {
       font-size: 1.5em;
-      letter-spacing: .1em; } }
+      letter-spacing: .2em; } }
 
 h3, h4, h5, h6, li {
   font-family: "ff-din-web", "Helvetica", sans-serif;
@@ -158,6 +158,14 @@ h3, h4, h5, h6, li {
     h3, h4, h5, h6, li {
       letter-spacing: .1em; } }
 
+@media screen and (max-width: 640px) {
+  li {
+    font-size: .9em; } }
+
+@media screen and (max-width: 640px) {
+  h3 {
+    font-size: 1em; } }
+
 p, a {
   font-family: "ff-din-web", "Helvetica", sans-serif;
   line-height: 1.9em;
@@ -165,7 +173,9 @@ p, a {
   letter-spacing: .03em; }
   @media screen and (max-width: 640px) {
     p, a {
-      line-height: 1.7em; } }
+      line-height: 1.7em;
+      font-family: "ff-din-web", "Helvetica", sans-serif;
+      font-size: .9em; } }
 
 .title {
   visibility: hidden;
@@ -175,6 +185,9 @@ p, a {
   font-size: 1.85em;
   padding-bottom: .9em;
   color: #4d4d4d; }
+  @media screen and (max-width: 640px) {
+    .title {
+      font-size: 1.35em; } }
   .title::after {
     content: "";
     display: block;
@@ -197,6 +210,9 @@ a.bodyLink {
   background-color: #333333;
   text-transform: uppercase;
   letter-spacing: .2em; }
+  @media screen and (max-width: 640px) {
+    .button a {
+      font-size: .85em; } }
   .button a:hover {
     color: black;
     background-color: white; }
@@ -433,6 +449,9 @@ body {
   background-color: #e8e8e8;
   font-size: 1em;
   line-height: 1.4; }
+  @media screen and (max-width: 640px) {
+    body {
+      font-size: 1em; } }
 
 .wrapper {
   *zoom: 1;
@@ -762,7 +781,7 @@ html, body {
   @media screen and (max-width: 640px) {
     .hero .arrow {
       max-width: 5em;
-      left: 90%; } }
+      margin-left: -2.5em; } }
   .hero .arrow polygon {
     fill: #f2f0f0;
     opacity: 1; }
@@ -844,7 +863,7 @@ html, body {
     margin-bottom: .1em;
     clear: both; }
   .topProject h3 {
-    font-weight: 400;
+    font-weight: 100;
     color: white;
     clear: both;
     display: block; }
@@ -864,7 +883,7 @@ html, body {
     margin: 0 0 0 0;
     list-style: none;
     width: 48%;
-    height: 18.5em;
+    height: 22em;
     width: 33.333333333333333%;
     background-position: 50% 55%;
     -webkit-transition: background-position 500ms ease; }
@@ -878,7 +897,7 @@ html, body {
       .projectGrid .gridItem {
         width: 100%; } }
     .projectGrid .gridItem:hover {
-      background-position: 50% 20%;
+      background-position: 50% 10%;
       -webkit-transition: background-position 1000ms ease; }
     .projectGrid .gridItem:nth-child(1) {
       background-image: url("../img/50logos-thumb2.jpg"); }
@@ -899,7 +918,7 @@ html, body {
       .projectGrid .gridItem {
         height: 15em; } }
   .projectGrid .gridTitle {
-    padding: 7em 0 0 10%; }
+    padding: 10em 0 0 10%; }
     .projectGrid .gridTitle h2 {
       font-size: 1.5em;
       line-height: 1.5em;
@@ -1003,7 +1022,7 @@ figure figcaption > a {
       padding: 16% 0 10% 0; } }
   @media screen and (max-width: 640px) {
     #homeAbout {
-      padding: 23% 0 13% 0; } }
+      padding: 17% 0 8% 0; } }
   #homeAbout .wrapper {
     visibility: hidden; }
   #homeAbout h3 {
@@ -1018,7 +1037,10 @@ figure figcaption > a {
   #homeAbout p {
     font-size: 1.2em;
     letter-spacing: .1em;
-    color: #b3b3b3; }
+    color: #999999; }
+    @media screen and (max-width: 640px) {
+      #homeAbout p {
+        font-size: 1em; } }
 
 /* Layout
 ------------------------------------------------------------ */
@@ -1049,6 +1071,9 @@ figure figcaption > a {
 .hero.stellarHero {
   background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/stellar-hero.jpg");
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/stellar-hero.jpg"); }
+.hero.errorHero {
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/stellar-hero.jpg");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/stellar-hero.jpg"); }
 .hero .tagProject {
   bottom: 30%; }
   @media screen and (max-width: 640px) {
@@ -1074,7 +1099,7 @@ figure figcaption > a {
       padding: 10% 0 10% 0; } }
   @media screen and (max-width: 640px) {
     .projectBrief {
-      padding: 7.5% 0 0% 0; } }
+      padding: 13% 0 5% 0; } }
   .projectBrief .wrapper {
     visibility: hidden; }
   .projectBrief .descriptionHeader h4::after {
@@ -1125,8 +1150,12 @@ figure figcaption > a {
           padding-right: 5%; } }
 
 .topVideo {
-  padding-top: 5%;
-  padding-bottom: 5%; }
+  padding-top: 6%;
+  padding-bottom: 6%; }
+  @media screen and (max-width: 640px) {
+    .topVideo {
+      padding-top: 13%;
+      padding-bottom: 13%; } }
 
 .video1 {
   position: relative;
@@ -1147,8 +1176,12 @@ figure figcaption > a {
   padding-top: 30px; }
 
 .layout1 {
-  padding-top: 5%;
-  padding-bottom: 5%; }
+  padding-top: 6%;
+  padding-bottom: 6%; }
+  @media screen and (max-width: 640px) {
+    .layout1 {
+      padding-top: 13%;
+      padding-bottom: 13%; } }
   .layout1 img:nth-child(1) {
     float: left;
     display: block;
@@ -1191,7 +1224,7 @@ figure figcaption > a {
         margin-right: 0; }
       @media screen and (max-width: 640px) {
         .layout1 .column img:nth-child(1) {
-          padding-top: 5%;
+          padding-top: 6%;
           float: left;
           display: block;
           margin-right: 2.35765%;
@@ -1226,8 +1259,12 @@ figure figcaption > a {
     width: 100%; }
 
 .layout4 {
-  padding-top: 5%;
-  padding-bottom: 5%; }
+  padding-top: 6%;
+  padding-bottom: 6%; }
+  @media screen and (max-width: 640px) {
+    .layout4 {
+      padding-top: 13%;
+      padding-bottom: 13%; } }
   .layout4 img:nth-child(odd) {
     float: left;
     display: block;
@@ -1274,10 +1311,14 @@ figure figcaption > a {
     padding-top: 0; }
 
 .layout5 {
-  padding-top: 5%;
-  padding-bottom: 5%; }
+  padding-top: 6%;
+  padding-bottom: 6%; }
+  @media screen and (max-width: 640px) {
+    .layout5 {
+      padding-top: 13%;
+      padding-bottom: 13%; } }
   .layout5 .row {
-    padding-bottom: 5%; }
+    padding-bottom: 6%; }
     .layout5 .row img {
       float: left;
       display: block;
@@ -1313,8 +1354,12 @@ figure figcaption > a {
 .functionality2 {
   background-image: -webkit-linear-gradient(bottom, #222222, #222222);
   background-image: linear-gradient(to top, #222222, #222222);
-  padding-top: 6.5%;
-  padding-bottom: 5%; }
+  padding-top: 7.8%;
+  padding-bottom: 6%; }
+  @media screen and (max-width: 640px) {
+    .functionality2 {
+      padding-top: 13%;
+      padding-bottom: 13%; } }
   .functionality2 .column {
     float: left;
     display: block;
@@ -1393,8 +1438,12 @@ figure figcaption > a {
     background-image: url("../img/lacuna-mockup.jpg"); }
 
 .fullImgContain {
-  padding-top: 5%;
-  padding-bottom: 5%; }
+  padding-top: 6%;
+  padding-bottom: 6%; }
+  @media screen and (max-width: 640px) {
+    .fullImgContain {
+      padding-top: 13%;
+      padding-bottom: 13%; } }
   .fullImgContain .row {
     float: left;
     display: block;
@@ -1405,15 +1454,19 @@ figure figcaption > a {
     .fullImgContain .row img {
       width: 100%; }
   .fullImgContain.stitch {
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     background-image: -webkit-linear-gradient(bottom, #222222, #222222);
     background-image: linear-gradient(to top, #222222, #222222); }
 
 .functionality {
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 6%;
+  padding-bottom: 6%;
   position: relative; }
+  @media screen and (max-width: 640px) {
+    .functionality {
+      padding-top: 13%;
+      padding-bottom: 13%; } }
   .functionality img {
     float: left;
     display: block;
@@ -1427,7 +1480,7 @@ figure figcaption > a {
         display: block;
         margin-right: 2.35765%;
         width: 100%;
-        padding-top: 5%; }
+        padding-top: 6%; }
         .functionality img:last-child {
           margin-right: 0; } }
   .functionality.invision img {
@@ -1435,7 +1488,7 @@ figure figcaption > a {
     @media screen and (max-width: 640px) {
       .functionality.invision img {
         padding: 0 5em;
-        padding-top: 5%; } }
+        padding-top: 6%; } }
   .functionality .info {
     visibility: hidden;
     position: absolute;
@@ -1484,13 +1537,18 @@ figure figcaption > a {
     padding-top: 4%; }
     @media screen and (max-width: 640px) {
       .textSnippet p {
-        font-size: 1.35em; } }
+        font-size: 1.1em;
+        line-height: 1.75em; } }
     .textSnippet p::after {
       padding-top: 4%; }
 
 .invision {
-  padding-top: 5%;
-  padding-bottom: 5%; }
+  padding-top: 6%;
+  padding-bottom: 6%; }
+  @media screen and (max-width: 640px) {
+    .invision {
+      padding-top: 13%;
+      padding-bottom: 13%; } }
   .invision iframe {
     margin: 0 auto;
     max-width: 442px;
@@ -1572,7 +1630,10 @@ html[xmlns] .slides {
   zoom: 1; }
 
 .process {
-  padding-top: 5%; }
+  padding-top: 6%; }
+  @media screen and (max-width: 640px) {
+    .process {
+      padding-top: 13%; } }
 
 .flex-viewport {
   max-height: 650px;
@@ -1703,9 +1764,9 @@ footer {
   @media screen and (max-width: 640px) {
     footer {
       background-color: #333333;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(35%, #d14e58), color-stop(35%, #232121));
-      background-image: -webkit-linear-gradient(bottom, #d14e58 35%, #232121 35%);
-      background-image: linear-gradient(to top,#d14e58 35%, #232121 35%); } }
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(43%, #d14e58), color-stop(43%, #232121));
+      background-image: -webkit-linear-gradient(bottom, #d14e58 43%, #232121 43%);
+      background-image: linear-gradient(to top,#d14e58 43%, #232121 43%); } }
   @media (min-width: 1300px) {
     footer {
       background-color: #333333;
@@ -1731,7 +1792,7 @@ footer {
         display: block;
         margin-right: 2.35765%;
         width: 100%;
-        padding-top: 5em;
+        padding-top: 3.5em;
         height: inherit; }
         footer .socialFoot:last-child {
           margin-right: 0; } }
@@ -1758,6 +1819,9 @@ footer {
       max-width: 2.8em;
       margin-right: 4%;
       height: 30%; }
+      @media screen and (max-width: 640px) {
+        footer .socialFoot .socialIcons {
+          max-width: 2.2em; } }
       footer .socialFoot .socialIcons path, footer .socialFoot .socialIcons rect, footer .socialFoot .socialIcons circle {
         fill: #717171; }
       footer .socialFoot .socialIcons:hover path, footer .socialFoot .socialIcons:hover circle, footer .socialFoot .socialIcons:hover rect {
@@ -1803,7 +1867,7 @@ footer {
   text-align: center; }
   @media screen and (max-width: 640px) {
     .projectBrief .aboutDescription {
-      padding-bottom: 10%; } }
+      padding-bottom: 12%; } }
   .projectBrief .aboutDescription::after {
     border-color: #666666;
     width: 20%;
@@ -1812,8 +1876,8 @@ footer {
     border: none; }
 
 .about {
-  padding-top: 7.5%;
-  padding-bottom: 7%; }
+  padding-top: 9%;
+  padding-bottom: 8.4%; }
   .about .wrapper {
     visibility: hidden; }
   .about .column1 {
@@ -1839,7 +1903,7 @@ footer {
         display: block;
         margin-right: 2.35765%;
         width: 100%;
-        padding: 5% 20% 5% 20%; }
+        padding: 5% 20% 10% 20%; }
         .about .column1:last-child {
           margin-right: 0; } }
     .about .column1 img {

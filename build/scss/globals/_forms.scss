@@ -10,6 +10,9 @@
 		// border:2px solid $secColor;
 		text-transform: uppercase;
 		letter-spacing: .2em;
+		@include media($small){
+			font-size: .85em;
+		}
 		&:hover{
 			color:black;
 			background-color: $linkHover;
