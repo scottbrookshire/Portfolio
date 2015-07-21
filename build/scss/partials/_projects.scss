@@ -30,7 +30,7 @@
 		@include background-image(linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../img/stellar-hero.jpg"));
 	}
 	&.errorHero{
-		@include background-image(linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../img/stellar-hero.jpg"));
+		@include background-image(linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../img/error-hero.jpg"));
 	}
 	.tagProject{
 		bottom:30%;
@@ -379,6 +379,12 @@
 				padding-top: $margin;
 		}
 	}
+	.demo{
+		@include span-columns(6);
+		@include media($small){
+			@include span-columns(12);
+		}
+	}
 	.info{
 		visibility:hidden;
 		position:absolute;
@@ -399,6 +405,32 @@
 	}
 }
 
+// div.gfyitem {
+//     width:100%;
+//     div:not(.gfyCtrlBox):not(.gfyCtrlTabPull){
+//         width: 100% !important;
+//         max-width:100% !important;
+//         height: auto !important;    
+//         .gfyPreLoadCanvas{
+//             display: none;
+//         }
+//         video{
+//             position:relative !important;
+//             margin-top: 0;
+//         }
+//     }
+//     .gfyCtrlBox{
+//         margin-bottom:10px !important; 
+//         .gfyCtrlPause, .gfyCtrlReverse, .gfyCtrlSlower, .gfyCtrlFaster{
+//         width:15px;
+//         height:15px;
+//         margin-top:0;
+//         }
+//       }
+//     .gfyGif{
+//         position:relative !important;
+//     }
+// }
 .textSnippet{
 	@extend .projectGradient;
 	padding:6% 0 6% 0;

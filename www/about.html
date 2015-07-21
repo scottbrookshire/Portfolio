@@ -35,56 +35,44 @@
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
    <script>
 window.onload = function () {
-    var styles = [
+    var styles = 
+    [
   {
     "featureType": "water",
+    "elementType": "geometry",
     "stylers": [
-      { "color": "#4f5459" },
-      { "visibility": "simplified" }
+      { "color": "#4f5459" }
+    ]
+  },{
+    "featureType": "landscape.man_made",
+    "elementType": "geometry",
+    "stylers": [
+      { "visibility": "simplified" },
+      { "color": "#aaa5a4" }
     ]
   },{
     "featureType": "poi",
     "elementType": "geometry",
     "stylers": [
-      { "visibility": "off" }
+      { "color": "#aaa5a4" }
     ]
   },{
-    "featureType": "poi",
-    "elementType": "labels.text",
+    "featureType": "road.local",
     "stylers": [
-      { "color": "#fbfffd" },
       { "visibility": "off" }
     ]
   },{
-    "featureType": "transit",
+    "featureType": "road.arterial",
     "elementType": "geometry",
     "stylers": [
-      { "visibility": "simplified" },
-      { "color": "#78787c" }
-    ]
-  },{
-    "featureType": "landscape",
-    "stylers": [
-      { "visibility": "simplified" }
-    ]
-  },{
-    "featureType": "transit",
-    "stylers": [
       { "visibility": "off" }
     ]
   },{
-    "featureType": "landscape",
-    "elementType": "geometry.fill",
-    "stylers": [
-      { "color": "#aaa5a4" },
-      { "visibility": "simplified" }
-    ]
-  },{
-    "featureType": "road",
+    "featureType": "road.highway",
     "elementType": "geometry",
     "stylers": [
-      { "visibility": "simplified" },
-      { "color": "#cccacb" }
+      { "color": "#cccacb" },
+      { "visibility": "simplified" }
     ]
   },{
     "featureType": "road",
@@ -93,13 +81,42 @@ window.onload = function () {
       { "visibility": "off" }
     ]
   },{
-    "featureType": "administrative",
-    "elementType": "labels.text",
+    "featureType": "poi",
+    "elementType": "labels",
     "stylers": [
-      { "visibility": "simplified" },
-      { "color": "#333333" }
+      { "visibility": "off" }
     ]
   },{
+    "featureType": "administrative",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "simplified" }
+    ]
+  },{
+    "featureType": "administrative.neighborhood",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "off" },
+      { "color": "#ece4e0" }
+    ]
+  },{
+    "featureType": "administrative.locality",
+    "stylers": [
+      { "visibility": "simplified" },
+      { "color": "#ffffff" }
+    ]
+  },{
+    "featureType": "landscape.natural",
+    "stylers": [
+      { "color": "#a09d9d" }
+    ]
+  },{
+    "featureType": "water",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "simplified" },
+      { "color": "#ffffff" }
+    ]
   }
 ];
 
@@ -197,7 +214,11 @@ map.mapTypes.set('Styled', styledMapType);
                     </p>
                     <p>I enjoy creating rich user experiences that feel both immersive and effortless. When designing I pay close attention to my client's brand. I believe that concept is paramount and harmony should always be adhered to. A strong ideation process should always play a key role in every design decision. But before everything else, I always start on paper. Whether it's logo sketches or wireframes, I utilize the tried and true art of pen and paper.</p>
                     <p>Oh, and my spirt animal is a <a href="http://scottbrookshiredesign.com/tauntaun/" class="bodyLink" target="_blank">tauntaun</a>. I hope you enjoy my work!</p>
+
+                    <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/127011711&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
                 </div>
+
+
                 
             </div>
         </section>
@@ -215,7 +236,13 @@ map.mapTypes.set('Styled', styledMapType);
             <div class="wrapper animateUp"> 
                 <div class="socialFoot">
                     <h3>Interested in working together?
-                    </br>Contact me at  <a href="#">scott.e.brookshire@gmail.com</a></h3>
+                    </br>Contact me at <a href="mailto:scott.e.brookshire@gmail.com" title="Email">scott.e.brookshire@gmail.com</a></h3>
+                    <!-- Dribble -->
+                    <div class="pulseOver socialIcons">
+                        <a href="https://dribbble.com/scottbrookshire" title="Dribble" target="_blank">
+                            <img src="img/icons/dribble.svg" class="svg" alt="Dribble" title="Check out my Dribble"/>
+                        </a>
+                    </div>
                      <!-- Behance -->
                     <div class="pulseOver socialIcons">
                         <a href="https://www.behance.net/scottbrookshire" title="Behance" target="_blank">
@@ -228,12 +255,6 @@ map.mapTypes.set('Styled', styledMapType);
                             <img src="img/icons/vimeo.svg" class="svg" alt="Vimeo" title="Check out my Vimeo"/>
                         </a>
                     </div>
-                    <!-- Dribble -->
-                    <!-- <div class="pulseOver socialIcons">
-                        <a href="#" title="Dribble" target="_blank">
-                            <img src="img/icons/dribble.svg" class="svg" alt="Dribble" title="Check out my Dribble"/>
-                        </a>
-                    </div> -->
                      <!-- Linkedin -->
                     <div class="pulseOver socialIcons">
                         <a href="http://www.linkedin.com/pub/scott-brookshire/78/48a/5bb" title="Linkedin" target="_blank">
@@ -245,7 +266,7 @@ map.mapTypes.set('Styled', styledMapType);
                          <a href="resume-scott_brookshire.pdf" title="Resume" target="_blank">
                             <img src="img/icons/resume.svg" class="svg" alt="Resume" title="View my resume"/>
                         </a>
-                    </div>
+                    </div> 
                 </div>
             
             <div class="cFoot">                    
@@ -262,7 +283,18 @@ map.mapTypes.set('Styled', styledMapType);
         <script src="js/plugins.js"></script>
         <script src="js/scripts.js"></script>
         <script src="js//libs/jquery.easing.1.3.js"></script>
+        
+        <!-- GOOGLE ANALYTICS
+        ================================================== -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+          ga('create', 'UA-42785587-1', 'auto');
+          ga('send', 'pageview');
+        </script>
         
     </body>
 </html>

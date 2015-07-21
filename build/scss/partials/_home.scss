@@ -73,13 +73,13 @@
 				letter-spacing: .35em;
 			}
 		}
-		@extend .slideRight;
+		// @extend .slideRight;
 	}
 	p{
 		color:$primColor;
 		letter-spacing: .05em;
 		font-size: 1.4em;
-		@extend .slideRight;
+		// @extend .slideRight;
 		
 		margin:0 auto;
 		@include media($small){
@@ -97,8 +97,12 @@
 	@extend .backgroundImage;
 	background-position: 50% 53%;
 	-webkit-transition:background-position 500ms ease;
+	-moz-transition:background-position 500ms ease;
+	transition:background-position 500ms ease;
 	&:hover{
 			-webkit-transition:background-position 1500ms ease;
+			-moz-transition:background-position 1500ms ease;
+			transition:background-position 1500ms ease;
 			background-position: 50% 49%;
 		}
 	&:nth-child(1){
@@ -209,6 +213,8 @@
 		width: 33.333333333333333%;
 		background-position: 50% 55%;
 			-webkit-transition:background-position 500ms ease;
+			-moz-transition:background-position 500ms ease;
+			transition:background-position 500ms ease;
 		@extend .backgroundImage;
 		@media (min-width:1500px){
 			height:21em;
@@ -223,6 +229,8 @@
 		&:hover{
 			background-position: 50% 10%;
 			-webkit-transition:background-position 1000ms ease;
+			-moz-transition:background-position 1000ms ease;
+			transition:background-position 1000ms ease;
 		}
 		&:nth-child(1){
 			background-image: url("../img/50logos-thumb2.jpg");

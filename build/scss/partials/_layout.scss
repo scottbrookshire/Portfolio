@@ -23,7 +23,7 @@ $margin    :6%;
 $marginMobile    :13%;
 
 
-video {
+#main video {
   position:absolute;
   right:0;
   top:0;
@@ -34,6 +34,11 @@ video {
   z-index: -100; 
   background:url("../img/home-hero.jpg") no-repeat;
   background-size: cover;
+}
+
+.functionality video{
+  width: 100%    !important;
+  height: auto   !important;
 }
 
 #bgvid{

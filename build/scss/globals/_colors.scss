@@ -18,16 +18,16 @@ $linkHover				: #fff; //CC4058
 // $projectColor1			: @include background-image(linear-gradient(to top, #C8CCCC, #C0C4C4));
 
 .projectGradient{
-	 @include background-image(linear-gradient(to left, #D3D3D3, #D8D8D8));
+	 @include background-image(linear-gradient(to right, #E0E0E0, #d6d6d6));
 }
 a{
 	text-decoration: none;
 	&:link, &:visited, &:active{
-		color:$linkColor;
+		color:#fff;
 		@extend .transition; 
 	}	
 	&:hover{
-		color:$linkHover;
+		color:#333;
 		@extend .transitionHover;
 	}
 }
