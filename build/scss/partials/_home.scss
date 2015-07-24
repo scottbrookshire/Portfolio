@@ -441,7 +441,7 @@ figure figcaption > a {
 			padding-top: 3%;
 			@extend .borderFlare;
 			border-width: 5px;
-			border-color: lighten($secColor, 15%);
+			border-color: lighten($secColor, 25%);
 		}
 	}
 	p{
