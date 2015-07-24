@@ -89,6 +89,10 @@ body {
   font-size: 19px;
   line-height: 28.5px; }
 
+html {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important; }
+
 h1, .alpha {
   font-size: 76px;
   line-height: 85.5px;
@@ -168,8 +172,8 @@ h3, h4, h5, h6, li {
 
 p, a {
   font-family: "ff-din-web", "Helvetica", sans-serif;
-  line-height: 1.9em;
-  color: #888;
+  line-height: 1.85em;
+  color: #777;
   letter-spacing: .03em; }
   @media screen and (max-width: 640px) {
     p, a {
@@ -183,7 +187,7 @@ p, a {
   display: block;
   line-height: 1.3em;
   font-size: 1.85em;
-  padding-bottom: .9em;
+  padding-bottom: .7em;
   color: #4d4d4d; }
   @media screen and (max-width: 640px) {
     .title {
@@ -1020,15 +1024,15 @@ figure figcaption > a {
     font-weight: bold;
     line-height: 1.4em;
     padding-top: 4%;
-    color: #666666;
-    border-top: 4px solid #999999; }
+    color: #666666; }
     #homeAbout h3::after {
-      padding-top: 4%;
-      border-color: #b3b3b3; }
+      padding-top: 3%;
+      border-width: 5px;
+      border-color: #595959; }
   #homeAbout p {
     font-size: 1.2em;
     letter-spacing: .1em;
-    color: #999999; }
+    color: #666; }
     @media screen and (max-width: 640px) {
       #homeAbout p {
         font-size: 1em; } }
@@ -1090,8 +1094,10 @@ figure figcaption > a {
       padding: 13% 0 5% 0; } }
   .projectBrief .wrapper {
     visibility: hidden; }
-  .projectBrief .descriptionHeader h4::after {
-    border: none; }
+  .projectBrief .descriptionHeader {
+    margin-bottom: -1em; }
+    .projectBrief .descriptionHeader h4::after {
+      border: none; }
   .projectBrief .description {
     float: left;
     display: block;

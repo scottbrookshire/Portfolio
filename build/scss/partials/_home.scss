@@ -436,17 +436,18 @@ figure figcaption > a {
 		// border-top: 2px solid $primColor;
 		padding-top: 4%;
 		color:lighten($secColor, 20%);
-		border-top: 4px solid lighten($secColor, 40%);
+		// border-top: 4px solid lighten($secColor, 40%);
 		&::after{
-			padding-top: 4%;
+			padding-top: 3%;
 			@extend .borderFlare;
-			border-color: lighten($secColor, 50%);
+			border-width: 5px;
+			border-color: lighten($secColor, 15%);
 		}
 	}
 	p{
 		font-size: 1.2em;
 		letter-spacing: .1em;
-		color:lighten($secColor, 40%);
+		color:#666;
 		@include media($small){
 			font-size: 1em;
 		}

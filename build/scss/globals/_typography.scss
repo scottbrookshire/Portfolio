@@ -7,6 +7,11 @@ $bodyLineHeight		            : 1.5;
 $scaleFactor		            : 2; // http://modularscale.com/
 
 body { @include rhythm(0); }
+html{
+	text-rendering: optimizeLegibility !important;
+
+-webkit-font-smoothing: antialiased !important;
+}
 
 h1,.alpha   { @include rhythm(2, 0, 1); }
 h2,.beta    { @include rhythm(1, 0, 1); }
@@ -66,8 +71,8 @@ h3{
 
 p, a{
 	font-family: $bodyFont;
-	line-height: 1.9em;
-	color:#888;
+	line-height: 1.85em;
+	color:#777;
 	letter-spacing: .03em;
 	@include media($small){
 		line-height: 1.7em;
@@ -82,7 +87,7 @@ p, a{
 	display:block;
 	line-height: 1.3em;
 	font-size: 1.85em;
-	padding-bottom: .9em;
+	padding-bottom: .7em;
 	color:lighten($secColor, 10%);
 	@include media ($small) { 
 		font-size: 1.35em;
