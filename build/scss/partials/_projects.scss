@@ -33,7 +33,7 @@
 		@include background-image(linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../img/error-hero.jpg"));
 	}
 	.tagProject{
-		bottom:30%;
+		bottom:35%;
 		@include media($small){
 		}
 		h1{

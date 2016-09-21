@@ -28,7 +28,7 @@ $bodyFont					:  "ff-din-web", 'Helvetica', sans-serif;
 h1, h2{
 	font-family: $headlineFont;
 	text-transform: uppercase;
-	font-weight: bold;
+	font-weight: light;
 	
 }
 h1{
@@ -73,7 +73,7 @@ p, a{
 	font-family: $bodyFont;
 	line-height: 1.85em;
 	color:#777;
-	letter-spacing: .03em;
+	letter-spacing: .02em;
 	@include media($small){
 		line-height: 1.7em;
 		font-family: $bodyFont;
@@ -83,17 +83,17 @@ p, a{
 
 .title{
 	visibility: hidden;
-	font-weight: bold;
+	font-weight: light;
 	display:block;
 	line-height: 1.3em;
 	font-size: 1.85em;
 	padding-bottom: 1.3em;
-	color:lighten($secColor, 10%);
+	color:$secColor;
 	@include media ($small) { 
 		font-size: 1.35em;
 	}
 	&::after{
-		content: "";
+		// content: "";
 		display:block;
 		border-bottom: 4px solid lighten($secColor, 10%);
 		opacity:.9;

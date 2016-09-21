@@ -134,7 +134,7 @@ p, ul, ol {
 h1, h2 {
   font-family: "ff-din-web", "Helvetica", sans-serif;
   text-transform: uppercase;
-  font-weight: bold; }
+  font-weight: light; }
 
 h1 {
   letter-spacing: .25em;
@@ -174,7 +174,7 @@ p, a {
   font-family: "ff-din-web", "Helvetica", sans-serif;
   line-height: 1.85em;
   color: #777;
-  letter-spacing: .03em; }
+  letter-spacing: .02em; }
   @media screen and (max-width: 640px) {
     p, a {
       line-height: 1.7em;
@@ -183,17 +183,16 @@ p, a {
 
 .title {
   visibility: hidden;
-  font-weight: bold;
+  font-weight: light;
   display: block;
   line-height: 1.3em;
   font-size: 1.85em;
   padding-bottom: 1.3em;
-  color: #4d4d4d; }
+  color: #333; }
   @media screen and (max-width: 640px) {
     .title {
       font-size: 1.35em; } }
   .title::after {
-    content: "";
     display: block;
     border-bottom: 4px solid #4d4d4d;
     opacity: .9;
@@ -488,7 +487,6 @@ img {
     display: none; } }
 
 .borderFlare, #homeAbout h3::after, .projectBrief .description::after, footer .socialFoot h3:nth-child(2)::after, .projectBrief .aboutDescription::after {
-  content: "";
   display: block;
   border-bottom: 4px solid #F2F0F0;
   opacity: .9;
@@ -1021,7 +1019,7 @@ figure figcaption > a {
   #homeAbout .wrapper {
     visibility: hidden; }
   #homeAbout h3 {
-    font-weight: bold;
+    font-weight: light;
     line-height: 1.4em;
     padding-top: 4%;
     color: #666666; }
@@ -1070,7 +1068,7 @@ figure figcaption > a {
   background-image: -webkit-linear-gradient(bottom, transparent, transparent), url("../img/error-hero.jpg");
   background-image: linear-gradient(to top, transparent, transparent), url("../img/error-hero.jpg"); }
 .hero .tagProject {
-  bottom: 30%; }
+  bottom: 35%; }
   .hero .tagProject h1 {
     font-size: 3.7em; }
     @media screen and (max-width: 640px) {
