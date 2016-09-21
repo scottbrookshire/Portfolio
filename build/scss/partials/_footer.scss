@@ -98,8 +98,7 @@ footer{
 			&:first-child{
 				&::after{
 					padding-top: 4%;
-					@extend .borderFlare;
-					border-color:darken($primColor, 20%);
+			
 				}
 			}
 		}
