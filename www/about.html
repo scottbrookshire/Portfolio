@@ -36,88 +36,123 @@
    <script>
 window.onload = function () {
     var styles = 
-    [
-  {
-    "featureType": "water",
-    "elementType": "geometry",
-    "stylers": [
-      { "color": "#4f5459" }
-    ]
-  },{
-    "featureType": "landscape.man_made",
-    "elementType": "geometry",
-    "stylers": [
-      { "visibility": "simplified" },
-      { "color": "#aaa5a4" }
-    ]
-  },{
-    "featureType": "poi",
-    "elementType": "geometry",
-    "stylers": [
-      { "color": "#aaa5a4" }
-    ]
-  },{
-    "featureType": "road.local",
-    "stylers": [
-      { "visibility": "off" }
-    ]
-  },{
-    "featureType": "road.arterial",
-    "elementType": "geometry",
-    "stylers": [
-      { "visibility": "off" }
-    ]
-  },{
-    "featureType": "road.highway",
-    "elementType": "geometry",
-    "stylers": [
-      { "color": "#cccacb" },
-      { "visibility": "simplified" }
-    ]
-  },{
-    "featureType": "road",
-    "elementType": "labels",
-    "stylers": [
-      { "visibility": "off" }
-    ]
-  },{
-    "featureType": "poi",
-    "elementType": "labels",
-    "stylers": [
-      { "visibility": "off" }
-    ]
-  },{
-    "featureType": "administrative",
-    "elementType": "labels",
-    "stylers": [
-      { "visibility": "simplified" }
-    ]
-  },{
-    "featureType": "administrative.neighborhood",
-    "elementType": "labels",
-    "stylers": [
-      { "visibility": "off" },
-      { "color": "#ece4e0" }
-    ]
-  },{
-    "featureType": "administrative.locality",
-    "stylers": [
-      { "visibility": "simplified" },
-      { "color": "#ffffff" }
-    ]
-  },{
-    "featureType": "landscape.natural",
-    "stylers": [
-      { "color": "#a09d9d" }
-    ]
-  },{
-    "featureType": "water",
-    "elementType": "labels",
-    "stylers": [
-      { "visibility": "simplified" },
-      { "color": "#ffffff" }
-    ]
-  }
+[
+    {
+        "featureType": "landscape",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 65
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 51
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 30
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 40
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.province",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "lightness": -25
+            },
+            {
+                "saturation": -100
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "hue": "#ffff00"
+            },
+            {
+                "lightness": -25
+            },
+            {
+                "saturation": -97
+            }
+        ]
+    }
 ];
 
 var options = {
@@ -166,7 +201,7 @@ map.mapTypes.set('Styled', styledMapType);
                 <p>Crafting experiences and seeking to make the complex clear & beautiful.</p> -->
                 <li><a href="index.html#projectMain" class="scroll">Portfolio</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="design-every-day/">Blog</a></li>
+                <li><a href="http://creativeclique.co/" target="_blank">Blog</a></li>
                  <p class="contactMenu">You can contact me at <a href="mailto:scott.e.brookshire@gmail.com" title="Email">scott.e.brookshire@gmail.com</a></p>               
             </ul>
         </nav>
@@ -187,16 +222,19 @@ map.mapTypes.set('Styled', styledMapType);
                 <div class="tag tagProject">
                   <!--   <h1> Hi, I'm Scott</h1> -->
                 </div>
+                <a href="#aboutMe" class="scroll " title="Learn more about me">
+                <img src="img/icons/arrow.svg" class="svg arrow floating"/>
+            </a>
             </div>
         </section>
         
         <!-- About header
         ================================================== -->
-        <section class="projectBrief">
+        <section id="aboutMe" class="projectBrief">
             <div class="wrapper animateUp">
                 <div class="aboutDescription">
                     <h4 class="title animateUp">Hi, my name is Scott </h4>
-                    <p>And this is the story all about how my life got flipped turned upside down.</p>
+                    <p>This is the story all about how my life got flipped turned upside down.</p>
                 </div>
             </div>
         </section>
@@ -210,9 +248,10 @@ map.mapTypes.set('Styled', styledMapType);
                     <img src="img/wreaking_ball.jpg">
                 </div>
                 <div class="column2">
-                    <p>I love design. Although I dabble in photography and screen-printing, my true passion is communication design. I am a graduate at the Academy of Art University, where I studied Web Design & New Media. My exposure to the art world started with watercolors and pastels, but I now specialize in UX, UI, web design, identity work, logo design and concepting.
+                    <p>I love design. My exposure to the art world started with watercolors and pastels, but I now specialize in UI, UX, motion graphics, prototyping, web design, identity work, and logo design.
                     </p>
-                    <p>I enjoy creating rich user experiences that feel both immersive and effortless. When designing I pay close attention to my client's brand. I believe that concept is paramount and harmony should always be adhered to. A strong ideation process should always play a key role in every design decision. But before everything else, I always start on paper. Whether it's logo sketches or wireframes, I utilize the tried and true art of pen and paper.</p>
+                    <p>I enjoy creating rich user experiences that feel both immersive and effortless. When designing I pay close attention to my client's brand. I believe that concept is paramount and harmony should always be adhered to. A strong ideation process should always play a key role in every design decision. But before anything, I always start on paper. Whether it's logo sketches or wireframes, I utilize the tried and true art of pen and paper.</p>
+                    <p>Interested in working together? Shoot me an email at <a href="mailto:scott.e.brookshire@gmail.com" class="bodyLink" title="Email">scott.e.brookshire@gmail.com</a></p>
                     <p>Oh, and my spirt animal is a <a href="http://scottbrookshiredesign.com/tauntaun/" class="bodyLink" target="_blank">tauntaun</a>. Here are some songs I like and I hope you enjoy my work!</p>
 
                     <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/127011711&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>

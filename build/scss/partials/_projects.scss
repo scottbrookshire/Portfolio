@@ -96,7 +96,7 @@
 			@include span-columns(12);
 		}
 		li{
-			padding-bottom: 1.4em;
+			padding-bottom: 1em;
 			@include media($small){
 				display:inline;
 				padding-right: 5%;

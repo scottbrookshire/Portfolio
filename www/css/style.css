@@ -1137,7 +1137,7 @@ figure figcaption > a {
         .projectBrief .tags:last-child {
           margin-right: 0; } }
     .projectBrief .tags li {
-      padding-bottom: 1.4em; }
+      padding-bottom: 1em; }
       @media screen and (max-width: 640px) {
         .projectBrief .tags li {
           display: inline;
@@ -1941,7 +1941,7 @@ footer {
 #map-canvas, #map_canvas {
   background-color: #ccc;
   width: 100%;
-  height: 40em; }
+  height: 400em; }
   @media screen and (max-width: 899px) {
     #map-canvas, #map_canvas {
       height: 20em; } }

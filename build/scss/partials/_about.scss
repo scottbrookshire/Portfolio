@@ -50,6 +50,7 @@
 }
 
 
+
 #map_canvas img{
 	padding:none;
 	}
@@ -57,7 +58,7 @@
 #map-canvas, #map_canvas{
 	background-color: #ccc;
 	width:100%;
-	height:40em;
+	height:400em;
 	@include media($medium){
 		height:20em;
 	}
